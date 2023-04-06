@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Pota One";
+  src: url(../fonts/PottaOne-Regular.ttf);
+}
 :root {
   --bg-main: #f0f2f5;
   --bg-body: #fff;
@@ -9,10 +13,10 @@
   --red: #e91e63;
   --black: #000;
   --nav-size: 70px;
-  --sudoku-cell-size: 50px;
+  --sudoku-cell-size: 40px;
   --border-radius: 10px;
-  --space-y: 20px;
-  --gap: 5px;
+  --space-y: 16px;
+  --gap: 4px;
   --font-size: 1.5rem;
   --font-size-lg: 2rem;
   --font-size-xl: 3rem;
@@ -227,32 +231,12 @@ nav {
   cursor: pointer;
 }
 
-.nav-logo img {
-  height: 60px;
-}
-
-.lg {
-  display: none;
-}
-
-.visible {
-  display: inline-block;
-}
-
-.dark .visible {
-  display: none;
-}
-
-.dark .lg {
-  display: block;
-}
-
 .main-grid-cell.filled {
   background-color: var(--filled-bg);
   color: var(--filled-color);
 }
 
-.main-grid-cell.active {
+.main-grid-cell.selected {
   background-color: var(--blue);
   color: var(--white);
 }
@@ -325,6 +309,7 @@ nav {
 .number {
   height: var(--sudoku-cell-size);
   border-radius: var(--border-radius);
+  background-color: var(--bg-main);
   color: var(--color-txt);
   display: grid;
   place-items: center;
@@ -335,26 +320,35 @@ nav {
 .delete {
   background-color: var(--red);
   color: var(--white);
+  height: var(--sudoku-cell-size);
+  border-radius: var(--border-radius);
+  display: grid;
+  place-items: center;
+  font-size: var(--font-size);
+  cursor: pointer;
 }
 
-.pause-screen, .result-screen {
+.pause-screen,
+.result-screen {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: var(--bg-body);
   align-items: center;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   display: none;
 }
 
-.pause-screen.active, .result-screen.actives {
+.pause-screen.active,
+.result-screen.active {
   display: flex;
 }
 
-.pause-screen > * + *, .result-screen > * + * {
+.pause-screen > * + *,
+.result-screen > * + * {
   margin-top: 20px;
 }
 
@@ -435,4 +429,31 @@ nav {
   .main {
     height: 100vh;
   }
+}
+.nav-logo img {
+  height: 60px;
+}
+
+.lg {
+  display: none;
+}
+
+.visible {
+  display: inline-block;
+}
+
+.dark .visible {
+  display: none;
+}
+
+.dark .lg {
+  display: block;
+}
+
+body {
+  max-height: 90vh !important;
+}
+
+.main {
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */
