@@ -1,5 +1,5 @@
 # 💫 About Me:
-Simple but Significant!<br>🌐 Freelance Web Developer<br>🌱 I’m currently learning NextJs<br>💬 Feel free to contact me<br>✉️ kanishkumar11@outlook.in
+Simple but Significant!<br>🌐 Freelance Web Developer<br>🌱 I’m currently learning NextJs<br>💬 Feel free to contact me<br>✉️ hey@kanishkumar.in
 
 
 ## 🌐 Socials:
