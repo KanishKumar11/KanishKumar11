@@ -49,7 +49,7 @@ const page = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Passion Fuels Purpose!"
-            className="mb-16 xs:!text-[30px] lg:text-7xl sm:!text-6xl  sm:mb-8 "
+            className="mb-16 xs:!text-[30px] lg:text-7xl sm:!text-6xl text-7xl  sm:mb-8 "
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:!col-span-8">

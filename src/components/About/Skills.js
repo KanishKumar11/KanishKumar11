@@ -38,6 +38,7 @@ const Skills = () => {
         <Skill name="MYSQL" x="32vw" y="-5vw" />
         <Skill name="Firebase" x="0vw" y="-20vw" />
         <Skill name="Wordpress" x="-25vw" y="-18vw" />
+        <Skill name="Appwrite" x="25vw" y="18vw" />
       </div>
     </>
   );

@@ -11,6 +11,7 @@ import project2 from "@/../public/images/projects/project-2.png";
 import project3 from "@/../public/images/projects/project-3.png";
 import project4 from "@/../public/images/projects/project-4.png";
 import project5 from "@/../public/images/projects/project-5.png";
+import project6 from "@/../public/images/projects/project-6.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -133,7 +134,7 @@ const Projects = () => {
         <Layout className="pt-16 md:!px-8 sm:!px-4">
           <AnimatedText
             text="imagination Trumps Knowledge!"
-            className=" xs:!text-4xl sm:text-6xl lg:text-7xl sm:mb-8  mb-16 "
+            className=" xs:!text-4xl text-7xl sm:text-6xl lg:text-7xl sm:mb-8  mb-16 "
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12 md:max-w-[90vw]">
@@ -158,11 +159,11 @@ const Projects = () => {
             <div className="col-span-6 md:col-span-12 md:max-w-[90vw]">
               {" "}
               <Project
-                title="Portfolio Website Design"
-                link="https://kanishkumar11.github.io/portfolio/"
-                type="Portfolio Website"
-                img={project3}
-                github="https://github.com/KanishKumar11/portfolio/"
+                title="E-learning Landing Page EduWeb"
+                link="https://kanish-e-learn.netlify.app/"
+                type="Landing Page"
+                img={project6}
+                github="https://github.com/KanishKumar11/e-learn"
               />
             </div>
             <div className="col-span-12 md:max-w-[90vw]">
@@ -178,11 +179,21 @@ const Projects = () => {
             <div className="col-span-6 md:col-span-12 md:max-w-[90vw]">
               {" "}
               <Project
-                title="Soduko Game"
-                link="https://kanishkumar11.github.io/soduko/"
+                title="Sudoku Game"
+                link="https://kanishkumar11.github.io/sudoku/"
                 type="Game"
                 img={project5}
-                github="https://github.com/soduko/"
+                github="https://github.com/KanishKumar11/sudoku"
+              />
+            </div>
+            <div className="col-span-6 md:col-span-12 md:max-w-[90vw]">
+              {" "}
+              <Project
+                title="Portfolio Website Design"
+                link="https://kanishkumar11.github.io/portfolio/"
+                type="Portfolio Website"
+                img={project3}
+                github="https://github.com/KanishKumar11/portfolio/"
               />
             </div>
           </div>

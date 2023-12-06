@@ -6,6 +6,7 @@ import Logo from "./Logo";
 import { useRouter } from "next/navigation";
 import {
   GithubIcon,
+  Instagram,
   LinkedInIcon,
   MoonIcon,
   SunIcon,
@@ -97,6 +98,15 @@ const Navbar = () => {
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap">
+          <motion.a
+            href="https://instagram.com/kanishkumar_11/"
+            target={"_blank"}
+            whileHover={{ y: -2 }}
+            className="w-6 mr-3"
+            whileTap={{ scale: 0.9 }}
+          >
+            <Instagram className="" />
+          </motion.a>
           <motion.a
             href="https://twitter.com/kanishkumar_11/"
             target={"_blank"}

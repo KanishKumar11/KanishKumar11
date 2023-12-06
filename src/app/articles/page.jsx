@@ -15,9 +15,12 @@ const page = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center">
+      <main className="w-full bg-light dark:bg-dark flex flex-col items-center justify-center min-h-screen">
         <Layout className="pt-16">
-          <AnimatedText text="Currently cooking this page!" className="mb-16" />
+          <AnimatedText
+            text="Currently cooking this page!"
+            className="mb-16 text-6xl"
+          />
         </Layout>
       </main>
     </>

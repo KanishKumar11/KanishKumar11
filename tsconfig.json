@@ -32,7 +32,9 @@
     "src/components/Layout.js",
     "src/components/AnimatedText.js",
     "src/app/about/page.jsx",
-    "src/components/Navbar.jsx"
+    "src/components/Navbar.jsx",
+    "src/app/page.jsx",
+    "src/components/Footer.jsx"
   ],
   "exclude": ["node_modules"]
 }

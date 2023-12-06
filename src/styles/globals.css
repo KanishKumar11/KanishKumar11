@@ -15,3 +15,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+*::selection {
+  background-color: rgb(255, 149, 0);
+}
+*::selection .dark {
+  background-color: rgb(255, 72, 0);
+}
