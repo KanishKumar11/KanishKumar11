@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
@@ -38,6 +37,7 @@ export default function Home() {
                 alt="Kanish Kumar"
                 className="w-full h-auto md:!inline-block lg:hidden  md:w-full "
                 priority
+                placeholder="blur"
                 sizes="(max-width:768px) 100vw,
               (max-width:1200px) 50vw,
               50vw"
