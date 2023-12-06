@@ -16,7 +16,6 @@ import Script from "next/script";
 export default function Home() {
   return (
     <>
-      // public/google-analytics.js
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-3KBJMZ0LWW"
