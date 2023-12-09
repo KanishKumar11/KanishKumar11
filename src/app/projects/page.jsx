@@ -134,7 +134,7 @@ const Projects = () => {
       </Head>
       <TransitionEffect />
       <main className="w-full flex flex-col items-center justify-center dark:text-light bg-light dark:bg-dark">
-        <Layout className="pt-16 md:!px-8 sm:!px-4">
+        <Layout className="pt-16 sm:!px-4">
           <AnimatedText
             text="imagination Trumps Knowledge!"
             className=" xs:!text-4xl text-7xl sm:text-6xl lg:text-7xl sm:mb-8  mb-16 "

@@ -7,7 +7,7 @@ const Details = ({ position, company, companylink, time, address, work }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mt-0 w-[60%] md:w-[80%]  mx-auto flex flex-col items-center justify-between"
+      className="my-8 first:mt-0 last:mt-0 w-[60%] md:w-[80%] mx-auto flex flex-col items-center justify-between"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -47,7 +47,10 @@ const Experience = () => {
       <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:!text-4xl md:mb-16">
         Experience
       </h2>
-      <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
+      <div
+        ref={ref}
+        className="w-[75%] mx-auto relative xs:!w-[130%] md:!w-full lg:w-[90%] md:-ml-[10%]"
+      >
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-[38px] top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[36px] xs:!left-[20px]"

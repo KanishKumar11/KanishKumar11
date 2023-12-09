@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Kanish Kumar",
+  title: "Kanish Kumar | Best Web Developer",
   description:
     "Hi, I &sbquo; m a freelance web developer who can create stunning and user-friendly websites for any industry. I have skills in frontend and backend development, using HTML, CSS, JavaScript, NEXTJs, MYSQL, and WordPress. I can handle web design, development, maintenance, optimization, and hosting. I can deliver high-quality and responsive web solutions that suit your needs and budget. I love web development and learning new things. I communicate well, deliver on time, and satisfy customers. If you need a freelance web developer who can make your web vision a reality, please contact me. I’m excited to work with you on your next web project.",
 };
