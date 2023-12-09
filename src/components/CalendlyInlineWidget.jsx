@@ -15,11 +15,13 @@ const CalendlyInlineWidget = () => {
   }, []);
 
   return (
-    <div
-      className="calendly-inline-widget"
-      data-url="https://calendly.com/kanishkumar/meet"
-      style={{ minWidth: "320px", height: "700px" }}
-    ></div>
+    <div className="h-auto">
+      <div
+        className="calendly-inline-widget h-full"
+        data-url="https://calendly.com/kanishkumar/meet"
+        style={{ minWidth: "320px", height: "700px" }}
+      ></div>
+    </div>
   );
 };
 
