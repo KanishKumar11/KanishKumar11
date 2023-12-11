@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   GithubIcon,
   Instagram,
@@ -16,14 +16,14 @@ import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const CustomLink = ({ href = "", title = "", className = "" }) => {
-  const router = useRouter();
+  const url = usePathname();
 
   return (
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
         className={`h-[1px] dark:bg-light inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-          router.asPath === href ? "w-full" : "w-0"
+          url === href ? "w-full" : "w-0"
         }`}
       >
         &nbsp;
@@ -37,6 +37,7 @@ const CustomMobileLink = ({
   className = "",
   toggle,
 }) => {
+  const url = usePathname();
   const router = useRouter();
   const handleClick = () => {
     router.push(href);
@@ -51,7 +52,7 @@ const CustomMobileLink = ({
       {title}
       <span
         className={`h-[1px] dark:bg-dark inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-          router.asPath === href ? "w-full" : "w-0"
+          url === href ? "w-full" : "w-0"
         }`}
       >
         &nbsp;
@@ -69,7 +70,7 @@ const Navbar = () => {
 
   return (
     <header className="relative w-full px-32 py-8 font-medium flex items-center justify-between bg-light dark:bg-dark dark:text-light z-10 lg:px-16 md:px-12 sm:px-8">
-      <button
+      <div
         className="items-center justify-center flex-col hidden lg:flex"
         onClick={handleClick}
       >
@@ -88,7 +89,7 @@ const Navbar = () => {
             isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
           }`}
         ></span>
-      </button>
+      </div>
       <div className="w-full  justify-between items-center lg:hidden flex">
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
