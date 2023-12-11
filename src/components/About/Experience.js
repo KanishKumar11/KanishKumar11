@@ -59,7 +59,7 @@ const Experience = () => {
           <Details
             position="Wordpress Developer"
             company="Glaark"
-            conpanyLink="https://web.archive.org/web/20220916044953/https://glaark.com/"
+            companyLink="https://web.archive.org/web/20220916044953/https://glaark.com/"
             time="Feb 2022 - OCT 2022"
             address="Amritsar, Punjab, India"
             work="Worked on a team responsible for developing complete website based on wordpress CMS, helped in improving their SEO performance and their link building statergy"
@@ -67,7 +67,7 @@ const Experience = () => {
           <Details
             position="Front-end Web Developer Intern"
             company="SuperBeta"
-            conpanyLink="http://superbeta.com/"
+            companyLink="http://superbeta.com/"
             time="May 2023 - June 2023"
             address="India"
             work="Collaborated with the development team to design and develop the company's website, implementing modern front-end technologies.
@@ -83,7 +83,7 @@ const Experience = () => {
           <Details
             position="Freelance front-end Web Developer"
             company="Self"
-            conpanyLink="/"
+            companyLink="/"
             time="June 2023 - Present"
             address="Amritsar, Punjab, India"
             work="Hi, 

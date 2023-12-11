@@ -19,5 +19,25 @@
   background-color: rgb(255, 149, 0);
 }
 *::selection .dark {
-  background-color: rgb(255, 72, 0);
+  background-color: rgba(255, 72, 0);
+}
+* {
+  scroll-behavior: smooth;
+}
+/* styles/scrollbar.css */
+
+/* Track */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
