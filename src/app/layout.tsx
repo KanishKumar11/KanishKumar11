@@ -12,7 +12,24 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "Kanish Kumar | Best Web Developer",
   description:
-    "Hi, I &sbquo; m a freelance web developer who can create stunning and user-friendly websites for any industry. I have skills in frontend and backend development, using HTML, CSS, JavaScript, NEXTJs, MYSQL, and WordPress. I can handle web design, development, maintenance, optimization, and hosting. I can deliver high-quality and responsive web solutions that suit your needs and budget. I love web development and learning new things. I communicate well, deliver on time, and satisfy customers. If you need a freelance web developer who can make your web vision a reality, please contact me. I’m excited to work with you on your next web project.",
+    "Hi, I'm a freelance web developer who can create stunning and user-friendly websites for any industry. I have skills in frontend and backend development, using HTML, CSS, JavaScript, NEXTJs, MYSQL, and WordPress. I can handle web design, development, maintenance, optimization, and hosting. I can deliver high-quality and responsive web solutions that suit your needs and budget. I love web development and learning new things. I communicate well, deliver on time, and satisfy customers. If you need a freelance web developer who can make your web vision a reality, please contact me. I’m excited to work with you on your next web project.",
+  keywords:
+    "web developer, frontend developer, backend developer, fullstack developer, nextjs developer, wordpress developer, freelance web developer",
+  image: "../../public/images/KanishKumar.png",
+  twitter: {
+    handle: "@KanishKumar_11",
+    site: "@KanishKumar_11",
+    card: "summary_large_image",
+  },
+  og: {
+    url: "https://kanishkumar.in/",
+    title: "Kanish Kumar | Best Web Developer",
+    description:
+      "Hi, I'm a freelance web developer who can create stunning and user-friendly websites for any industry. I have skills in frontend and backend development, using HTML, CSS, JavaScript, NEXTJs, MYSQL, and WordPress. I can handle web design, development, maintenance, optimization, and hosting. I can deliver high-quality and responsive web solutions that suit your needs and budget. I love web development and learning new things. I communicate well, deliver on time, and satisfy customers. If you need a freelance web developer who can make your web vision a reality, please contact me. I’m excited to work with you on your next web project.",
+    image: "../../public/images/KanishKumar.png",
+    site_name: "Kanish Kumar | Best Web Developer",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -22,6 +39,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="image" content={metadata.image} />
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content={metadata.image} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta property="og:url" content={metadata.og.url} />
+        <meta property="og:title" content={metadata.og.title} />
+        <meta property="og:description" content={metadata.og.description} />
+        <meta property="og:image" content={metadata.og.image} />
+        <meta property="og:site_name" content={metadata.og.site_name} />
+        <meta property="og:type" content={metadata.og.type} />
+        <link rel="stylesheet" href="/styles/globals.css" />
+      </head>
       <body className={montserrat.className}>
         <Script id="theme-switcher" strategy="beforeInteractive">
           {`

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
-import profilePic from "../../public/images/1.png";
+import profilePic from "../../public/images/KanishKumar.png";
 import Link from "next/link";
 import HireMe from "../components/HireMe";
 import TransitionEffect from "../components/TransitionEffect";
@@ -34,9 +34,9 @@ export default function Home() {
             <div className="w-1/2 md:w-full">
               <Image
                 src={profilePic}
-                alt="Kanish Kumar"
+                alt="Kanish Kumar | Best Freelance Web Developer"
                 className="w-full h-auto md:!inline-block lg:hidden  md:w-full "
-                priority
+                priority={true}
                 placeholder="blur"
                 sizes="(max-width:768px) 100vw,
               (max-width:1200px) 50vw,
@@ -49,9 +49,9 @@ export default function Home() {
                 className="sm:!text-3xl lg:!text-[2.7rem] text-6xl !text-left xl:text-[2.7rem] lg:!text-center md:text-5xl "
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-                As a skilled front-end developer, I am dedicated to turning
-                ideas into innovative websites. Explore my latest projects and
-                articles, showcasing my expertise in Nextjs and web development.
+                As a skilled Web developer, I am dedicated to turning ideas into
+                innovative websites. Explore my latest projects and articles,
+                showcasing my expertise in Nextjs and web development.
               </p>
               <div className="flex items-center self-center mt-2 lg:self-center">
                 <Link
