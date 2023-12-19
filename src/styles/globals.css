@@ -17,9 +17,11 @@
 }
 *::selection {
   background-color: rgb(255, 149, 0);
+  color: white;
 }
 *::selection .dark {
   background-color: rgba(255, 72, 0);
+  color: white;
 }
 * {
   scroll-behavior: smooth;
@@ -39,5 +41,5 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background-color: rgba(255, 72, 0);
 }
