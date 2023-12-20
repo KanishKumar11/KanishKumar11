@@ -55,7 +55,7 @@ export default function Home() {
               </p>
               <div className="flex items-center self-center mt-2 lg:self-center">
                 <Link
-                  href="#call"
+                  href="/book-a-call"
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-solid border-transparent hover:border-dark border-2 dark:bg-light dark:text-dark hover:dark:border-light hover:dark:text-light hover:dark:bg-dark md:p-2 md:px-4 md:text-base "
                 >
                   Book A Call <LinkArrow className="!w-4 mb-2 ml-1" />

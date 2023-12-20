@@ -17,9 +17,9 @@ const CalendlyInlineWidget = () => {
   return (
     <div className="h-auto">
       <div
-        className="calendly-inline-widget h-full"
+        className="calendly-inline-widget h-[680px] lg:h-[950px] lg:mt-5"
         data-url="https://calendly.com/kanishkumar/meet"
-        style={{ minWidth: "320px", height: "700px" }}
+        style={{ minWidth: "320px" }}
       ></div>
     </div>
   );
