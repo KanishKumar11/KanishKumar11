@@ -14,11 +14,19 @@ import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [projectsLoading, setProjectsLoading] = useState(true);
+  const [aboutLoading, setAboutLoading] = useState(true);
   useEffect(() => {
     // Simulate data fetching
     setTimeout(() => {
       setIsLoading(false);
+    }, 200);
+    setTimeout(() => {
+      setProjectsLoading(false);
     }, 1000);
+    setTimeout(() => {
+      setAboutLoading(false);
+    }, 1500);
   }, []);
 
   return (
@@ -93,8 +101,8 @@ export default function Home() {
               />
             </div>
           </main>
-          <Projects />
-          <About />
+          {!projectsLoading && <Projects />}
+          {!aboutLoading && <About />}
         </div>
       )}
     </>

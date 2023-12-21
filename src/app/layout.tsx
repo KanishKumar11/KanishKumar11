@@ -78,7 +78,7 @@ export default function RootLayout({
         <Navbar />
         <NextTopLoader
           color="#ff4800"
-          initialPosition={0.08}
+          initialPosition={0.7}
           crawlSpeed={200}
           height={3}
           crawl={true}
