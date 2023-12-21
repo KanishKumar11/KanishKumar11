@@ -180,6 +180,12 @@ const Navbar = () => {
               className=""
               toggle={handleClick}
             />
+            <CustomMobileLink
+              href="/book-a-call"
+              title="Book A Call"
+              className=""
+              toggle={handleClick}
+            />
           </nav>
 
           <nav className="flex items-center justify-center flex-wrap mt-2">

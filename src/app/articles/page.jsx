@@ -1,6 +1,5 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
-import TransitionEffect from "@/components/TransitionEffect";
 import Head from "next/head";
 import React from "react";
 
@@ -14,7 +13,6 @@ const page = () => {
           content="Kanish Kumar - I'm freelance web developer"
         />
       </Head>
-      <TransitionEffect />
       <main className="w-full bg-light dark:bg-dark flex flex-col items-center justify-center min-h-screen">
         <Layout className="pt-16">
           <AnimatedText

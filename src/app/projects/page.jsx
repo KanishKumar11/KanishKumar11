@@ -14,7 +14,6 @@ import project5 from "@/../public/images/projects/project-5.png";
 import project6 from "@/../public/images/projects/project-6.png";
 import project7 from "@/../public/images/projects/project-7.png";
 import { motion } from "framer-motion";
-import TransitionEffect from "@/components/TransitionEffect";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { RiArrowDropRightFill } from "react-icons/ri";
 
@@ -44,7 +43,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
+        <span className="text-primaryo font-medium text-xl dark:text-primaryDark xs:text-base">
           {type}
         </span>
         <Link
@@ -96,7 +95,7 @@ const Project = ({ type, title, summary, img, link, github }) => {
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">
+        <span className="text-primaryo font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">
           {type}
         </span>
         <Link
@@ -177,7 +176,7 @@ const Projects = () => {
           />
         </div>
         <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-          <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
+          <span className="text-primaryo font-medium text-xl dark:text-primaryDark xs:text-base">
             {type}
           </span>
           <div
@@ -218,7 +217,6 @@ const Projects = () => {
           content="Kanish Kumar - I'm freelance web developer"
         />
       </Head>
-      <TransitionEffect />
       <main className="w-full flex flex-col items-center justify-center dark:text-light bg-light dark:bg-dark">
         <Layout className="pt-16 sm:!px-4">
           <AnimatedText
@@ -226,8 +224,8 @@ const Projects = () => {
             className=" xs:!text-4xl text-7xl sm:text-6xl lg:text-7xl sm:mb-8  mb-16 "
           />
           <AnimatedText
+            className=" xs:!text-3xl text-5xl sm:text-4xl lg:text-5xl sm:mb-8  mb-16 "
             text="imagination Trumps Knowledge!"
-            className=" xs:!text-4xl text-7xl sm:text-6xl lg:text-7xl sm:mb-8  mb-16 "
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12 md:max-w-[90vw]">

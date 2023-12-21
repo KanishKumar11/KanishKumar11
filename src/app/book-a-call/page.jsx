@@ -12,7 +12,7 @@ const BookACall = () => {
             text="Book A Call"
             className="sm:!text-3xl lg:!text-[2.7rem] text-6xl !text-center xl:text-[2.7rem] lg:!text-center md:text-5xl "
           />
-          <p className="text-justify">
+          <p className="text-center text-sm mt-5 lg:px-10 px-20">
             Ready to connect? Use the convenient scheduling tool below to book a
             call with me. Whether you have questions about my portfolio, want to
             discuss potential collaborations, or just want to chat about shared

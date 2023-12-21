@@ -1,12 +1,12 @@
 import React from "react";
-import TransitionEffect from "@/components/TransitionEffect";
+// import TransitionEffect from "@/components/TransitionEffect";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 
 const notFound = () => {
   return (
     <>
-      <TransitionEffect />
+      {/* <TransitionEffect /> */}
       <main className="flex items-center text-dark w-full min-h-[75vh] bg-light dark:bg-dark dark:text-light">
         <Layout className="!pt-0 md:!pt-16 h-full sm:!p-8 xl:px-36 ">
           <div className="text-center flex-col h-full flex items-center justify-center">
