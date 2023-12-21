@@ -2,31 +2,30 @@
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
-import profilePic from "../../public/images/KanishKumar.png";
+import profilePic from "../../public/KanishKumar.webp";
 import Link from "next/link";
 import HireMe from "../components/HireMe";
-import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
-import Projects from "./projects/page.jsx";
-import About from "./about/page.jsx";
+import lightBulb from "../../public/miscellaneous_icons_1.svg";
 import { LinkArrow } from "@/components/Icons";
-import Script from "next/script";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
+import dynamic from "next/dynamic";
+
+const DynamicProjects = dynamic(() => import("./projects/page.jsx"), {
+  loading: () => <Loading />,
+});
+const DynamicAbout = dynamic(() => import("./about/page.jsx"), {
+  loading: () => <Loading />,
+});
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
-  const [projectsLoading, setProjectsLoading] = useState(true);
-  const [aboutLoading, setAboutLoading] = useState(true);
+
   useEffect(() => {
     // Simulate data fetching
     setTimeout(() => {
       setIsLoading(false);
     }, 200);
-    setTimeout(() => {
-      setProjectsLoading(false);
-    }, 1000);
-    setTimeout(() => {
-      setAboutLoading(false);
-    }, 1500);
   }, []);
 
   return (
@@ -35,18 +34,6 @@ export default function Home() {
         <Loading />
       ) : (
         <div>
-          <Script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-3KBJMZ0LWW"
-          />
-          <Script id="google-analytics">
-            {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-3KBJMZ0LWW');
-  `}
-          </Script>
           <main className="flex items-center text-dark w-full min-h-screen bg-light dark:bg-dark dark:text-light">
             <Layout className="!pt-0 md:!pt-16 sm:!p-8 xl:px-36 ">
               <div className="flex items-center justify-between w-full lg:flex-col">
@@ -67,6 +54,7 @@ export default function Home() {
                     text="Turning Vision Into Reality With Code And Design."
                     className="sm:!text-3xl lg:!text-[2.7rem] text-6xl !text-left xl:text-[2.7rem] lg:!text-center md:text-5xl "
                   />
+
                   <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                     As a skilled Web developer, I am dedicated to turning ideas
                     into innovative websites. Explore my latest projects and
@@ -101,8 +89,8 @@ export default function Home() {
               />
             </div>
           </main>
-          {!projectsLoading && <Projects />}
-          {!aboutLoading && <About />}
+          <DynamicProjects />
+          <DynamicAbout />
         </div>
       )}
     </>

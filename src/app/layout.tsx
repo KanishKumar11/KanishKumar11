@@ -76,6 +76,7 @@ export default function RootLayout({
           }          `}
         </Script>
         <Navbar />
+
         <NextTopLoader
           color="#ff4800"
           initialPosition={0.7}
