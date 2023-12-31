@@ -4,7 +4,8 @@ import "../styles/globals.css";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import NextTopLoader from "nextjs-toploader";
-
+import SmoothScroll from "@/components/hooks/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
@@ -43,11 +44,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
@@ -66,7 +63,9 @@ export default function RootLayout({
         <meta property="og:type" content={metadata.og.type} />
         <link rel="stylesheet" href="/styles/globals.css" />
       </head>
-      <body className={montserrat.className}>
+      <body
+        className={`${montserrat.className} bg-light dark:bg-dark relative`}
+      >
         <Script id="theme-switcher" strategy="beforeInteractive">
           {`
           if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -75,6 +74,8 @@ export default function RootLayout({
             document.documentElement.classList.remove('dark')
           }          `}
         </Script>
+
+        <CustomCursor />
         <Navbar />
 
         <NextTopLoader
@@ -92,7 +93,7 @@ export default function RootLayout({
           zIndex={1600}
           showAtBottom={false}
         />
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
         <Footer />
       </body>
     </html>

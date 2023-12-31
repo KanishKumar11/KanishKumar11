@@ -44,10 +44,10 @@ const CustomMobileLink = ({
     toggle();
   };
   return (
-    <button
+    <Link
       href={href}
       className={`${className} relative group text-light dark:text-dark my-2`}
-      onClick={handleClick}
+      // onClick={handleClick}
     >
       {title}
       <span
@@ -57,7 +57,7 @@ const CustomMobileLink = ({
       >
         &nbsp;
       </span>
-    </button>
+    </Link>
   );
 };
 
@@ -69,9 +69,9 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative w-full px-32 py-8 font-medium flex items-center justify-between bg-light dark:bg-dark dark:text-light z-10 lg:px-16 md:px-12 sm:px-8">
+    <header className="relative w-full px-32 py-8 font-medium flex items-center justify-between bg-light dark:bg-dark dark:text-light lg:px-16 md:px-12 sm:px-8">
       <div
-        className="items-center justify-center flex-col hidden lg:flex cursor-pointer"
+        className="items-center justify-center flex-col hidden lg:flex cursor-pointer z-10"
         onClick={handleClick}
       >
         <span
@@ -91,14 +91,14 @@ const Navbar = () => {
         ></span>
       </div>
       <div className="w-full  justify-between items-center lg:hidden flex">
-        <nav>
+        <nav className="z-10">
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
           <CustomLink href="/articles" title="Articles" className="ml-4" />
         </nav>
 
-        <nav className="flex items-center justify-center flex-wrap">
+        <nav className="flex items-center justify-center flex-wrap z-10">
           <motion.a
             href="https://instagram.com/kanishkumar_11/"
             target={"_blank"}
@@ -231,7 +231,7 @@ const Navbar = () => {
           </nav>
         </motion.div>
       )}
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+      <div className="absolute left-[50%] top-2 translate-x-[-50%] z-10">
         <Logo />
       </div>
     </header>

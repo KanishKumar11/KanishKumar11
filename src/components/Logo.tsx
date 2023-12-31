@@ -22,9 +22,8 @@ const Logo = () => {
           ],
           transition: { duration: 1, repeat: Infinity },
         }}
-        className="w-16 h-16 bg-dark text-light flex items-center justify-center rounded-full text-2xl font-bold dark:border-light border border-solid border-transparent"
+        className="w-16 h-16 bg-dark z-10 text-light flex items-center justify-center rounded-full text-2xl font-bold dark:border-light border border-solid border-transparent"
       >
-        {/* <Image src="/images/svgs/logo.svg" alt='logo' width={64} height={64} /> */}
         KK
       </MotionLink>
     </div>
