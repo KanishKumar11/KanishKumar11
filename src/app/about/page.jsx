@@ -4,7 +4,7 @@ import Head from "next/head";
 import AnimatedText from "@/components/AnimatedText";
 import Image from "next/image";
 import Layout from "@/components/Layout";
-import profilePic from "../../../public/images/profile/kanish-pp.webp";
+import profilePic from "../../../public/images/profile/about.jpeg";
 import { useSpring, useMotionValue, useInView } from "framer-motion";
 import Skills from "@/components/About/Skills";
 import Experience from "@/components/About/Experience";

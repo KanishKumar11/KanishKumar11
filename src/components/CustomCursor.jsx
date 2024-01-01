@@ -12,7 +12,7 @@ const CustomCursor = () => {
         WebkitMaskPosition: `${x - 50}px ${y - 50}px`,
       }}
       transition={{ type: "tween", ease: "backOut" }}
-      className={`h-auto w-full mask absolute min-h-screen z-[1] blur-[2px] ${
+      className={`h-full w-full mask absolute min-h-screen z-[1] blur-[2px] ${
         isHovered ? "bg-none" : "bg-orange-500"
       }`}
     >

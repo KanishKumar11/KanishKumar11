@@ -123,12 +123,13 @@ html.dark {
 .mask {
   mask-image: url("/mask.svg");
   mask-repeat: no-repeat;
-  mask-size: 100px;
-  color: black;
+  mask-size: 200px;
+  color: rgb(255, 25, 25);
   z-index: 1;
-  background-image: url("/mesh.png");
+  background-image: url("/mesh.svg");
   background-repeat: repeat;
   background-size: auto;
+  opacity: 0.3;
 }
 .mask:before {
   content: "";
