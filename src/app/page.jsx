@@ -10,8 +10,7 @@ import { LinkArrow } from "@/components/Icons";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
 import dynamic from "next/dynamic";
-import useMousePosition from "@/components/hooks/useMousePosition";
-import { motion } from "framer-motion";
+import CustomCursor from "@/components/CustomCursor";
 const DynamicProjects = dynamic(() => import("./projects/page.jsx"), {
   loading: () => <Loading />,
 });
@@ -20,10 +19,7 @@ const DynamicAbout = dynamic(() => import("./about/page.jsx"), {
 });
 
 export default function Home() {
-  const { x, y } = useMousePosition();
-  const [isHovered, setIsHovered] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const size = isHovered ? 400 : 40;
   useEffect(() => {
     // Simulate data fetching
     setTimeout(() => {
@@ -91,6 +87,7 @@ export default function Home() {
 
       <DynamicProjects />
       <DynamicAbout />
+      <CustomCursor />
     </>
   );
 }
