@@ -10,7 +10,6 @@ import { LinkArrow } from "@/components/Icons";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
 import dynamic from "next/dynamic";
-import CustomCursor from "@/components/CustomCursor";
 const DynamicProjects = dynamic(() => import("./projects/page.jsx"), {
   loading: () => <Loading />,
 });
@@ -87,7 +86,6 @@ export default function Home() {
 
       <DynamicProjects />
       <DynamicAbout />
-      <CustomCursor />
     </>
   );
 }

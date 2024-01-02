@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import NextTopLoader from "nextjs-toploader";
 import SmoothScroll from "@/components/hooks/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
