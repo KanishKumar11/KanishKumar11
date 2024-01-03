@@ -10,6 +10,8 @@ import { LinkArrow } from "@/components/Icons";
 import { useEffect, useState } from "react";
 import Loading from "@/components/Loading";
 import dynamic from "next/dynamic";
+import Cilentele from "@/components/Clientele";
+
 const DynamicProjects = dynamic(() => import("./projects/page.jsx"), {
   loading: () => <Loading />,
 });
@@ -79,11 +81,11 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className="absolute right-8 bottom-12 inline-block w-24 md:hidden">
+        <div className="absolute right-8 bottom-28 inline-block w-24 md:hidden">
           <Image src={lightBulb} alt="Kanish Kumar" className="w-full h-auto" />
         </div>
       </main>
-
+      <Cilentele />
       <DynamicProjects />
       <DynamicAbout />
     </>
