@@ -63,15 +63,16 @@ const Clientele = () => {
                 className="md:basis-1/2 lg:basis-1/3 basis-1/5 "
               >
                 <div className="p-1">
-                  <Card className="h-28 w-48 gap-5">
-                    <CardContent className="flex aspect-video h-28 w-48 items-center justify-center p-6">
+                  <Card className="h-28 w-48 gap-5 relative">
+                    <CardContent className="flex aspect-video h-28 w-48 items-center justify-center p-6 bg-orange-500/10 rounded-md">
                       <Image
                         src={brand.imgUrl}
                         width={100}
                         height={100}
-                        className="h-28 w-48 object-contain"
+                        className="h-28 w-48 object-contain  drop-shadow-[0px_0px_35px_#FF4500] grayscale dark:brightness-200"
                       />
                     </CardContent>
+
                   </Card>
                 </div>
               </CarouselItem>

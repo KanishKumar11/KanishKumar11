@@ -294,7 +294,6 @@ const Projects = () => {
               />
             </div>
             <div className="col-span-6 md:col-span-12 md:max-w-[90vw]">
-              {" "}
               <Project
                 title="E-learning Landing Page EduWeb"
                 link="https://kanish-e-learn.netlify.app/"
