@@ -13,6 +13,7 @@ import project4 from "@/../public/images/projects/project-4.webp";
 import project5 from "@/../public/images/projects/project-5.webp";
 import project6 from "@/../public/images/projects/project-6.webp";
 import project7 from "@/../public/images/projects/project-7.webp";
+import projectZlaarkImg from "@/../public/images/projects/project-8.png";
 import { motion } from "framer-motion";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { RiArrowDropRightFill } from "react-icons/ri";
@@ -232,6 +233,17 @@ const Projects = () => {
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12 md:max-w-[90vw]">
+              <FeaturedProject
+                title="Zlaark Expense Manager App"
+                summary="Zlaark is an advanced expense management application built using Next.js and React. Leveraging ShadCN UI, the interface is clean, modern, and intuitive. Zod ensures robust form validation, providing a seamless user experience. The integration of React Query enables efficient data fetching, caching, and synchronization, ensuring the app remains responsive and reliable. Zlaark empowers users to manage their finances with ease, offering insightful analytics and real-time expense tracking."
+                link="https://zlaark.kanishkumar.in//"
+                type="Featured Project"
+                img={projectZlaarkImg}
+                github="https://github.com/KanishKumar11/Zlaark-Expense-Manager/"
+              />
+            </div>
+
+            <div className="col-span-12 md:max-w-[90vw]">
               <FullStackProject
                 title="Dual-Front E-commerce: User Store & Admin Dashboard"
                 summary="This project showcases the integration of cutting-edge technologies to deliver a robust, scalable, and aesthetically pleasing e-commerce solution. Explore the seamless synergy between ReactJS and NextJS, coupled with the responsive design facilitated by Tailwind CSS and Shadcn. The backend leverages the power of Prisma with MySQL, ensuring efficient data management and retrieval. Whether you're a customer navigating the store or an admin streamlining operations, this project exemplifies the synergy of modern web development technologies."
@@ -283,6 +295,7 @@ const Projects = () => {
                 github="https://github.com/KanishKumar11/metaverse-landing-page/"
               />
             </div>
+
             <div className="col-span-6 md:col-span-12 md:max-w-[90vw]">
               <Project
                 title="Modern Bank landing Page"
