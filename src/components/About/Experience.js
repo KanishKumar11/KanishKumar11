@@ -70,15 +70,23 @@ const Experience = () => {
             companyLink="http://superbeta.com/"
             time="May 2023 - June 2023"
             address="India"
-            work="Collaborated with the development team to design and develop the company's website, implementing modern front-end technologies.
-            Translated UI/UX design wireframes into functional and responsive web applications.
-            Developed and maintained website features, ensuring a seamless user experience across multiple browsers and devices.
-            Assisted in optimizing website performance through code refactoring and implementing best practices.
-            Conducted thorough testing and debugging to identify and resolve any issues or bugs.
-            Participated in team meetings and provided valuable insights and suggestions for improving the website's design and functionality.
-            Gained practical experience in version control systems (e.g., Git) and collaborated effectively using platforms such as GitHub.
-            Actively contributed to the team's agile development processes, including sprint planning and daily stand-up meetings.
-            "
+            work="Developed responsive web applications using modern front-end technologies. Translated design wireframes into functional interfaces, optimized website performance, and conducted thorough testing. Collaborated effectively in an agile development environment, contributing to sprint planning and leveraging version control systems."
+          />
+          <Details
+            position="Full Stack Web Developer Intern"
+            company="Sow Tech"
+            companyLink="http://sowtech.in/"
+            time="Jan 2024 - July 2024"
+            address="India"
+            work="Developed full-stack web applications using React, Next.js, Tailwind CSS, and MongoDB. Implemented state management with Zustand, ensured data integrity using Zod, and built responsive, accessible UI components. Collaborated in a remote team environment, contributing to efficient and innovative web solutions."
+          />
+          <Details
+            position="Junior Full Stack Developer"
+            company="Sow Tech"
+            companyLink="http://sowtech.in/"
+            time="July 2024 - Present"
+            address="India"
+            work="Advanced from internship to full developer role. Continued building complex web applications with enhanced responsibilities. Focused on optimizing application performance, implementing advanced state management techniques, and leading more complex project implementations."
           />
           <Details
             position="Freelance front-end Web Developer"
@@ -86,15 +94,7 @@ const Experience = () => {
             companyLink="/"
             time="June 2023 - Present"
             address="Amritsar, Punjab, India"
-            work="Hi, 
-            I’m a freelance web developer who can create stunning and user-friendly websites for any industry. 
-            
-            I have skills in frontend and backend development, using HTML, CSS, JavaScript, NEXTJs, MYSQL, and WordPress. 
-            
-            I can handle web design, development, maintenance, optimization, and hosting. I can deliver high-quality and responsive web solutions that suit your needs and budget. I love web development and learning new things. I communicate well, deliver on time, and satisfy customers. 
-            
-            If you need a freelance web developer who can make your web vision a reality, please contact me. I’m excited to work with you on your next web project. 
-            "
+            work="Delivering high-quality web solutions across frontend and backend development. Specializing in creating responsive, user-friendly websites using technologies like HTML, CSS, JavaScript, Next.js, MySQL, and WordPress. Committed to meeting client needs through effective communication and timely project delivery."
           />
         </ul>
       </div>
