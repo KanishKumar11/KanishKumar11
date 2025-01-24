@@ -81,7 +81,7 @@ const Projects = () => {
                     className={`${
                       project.type == "Featured Project"
                         ? "col-span-12"
-                        : "col-span-6"
+                        : "lg:col-span-6"
                     }`}
                   >
                     {project.type === "Featured Project" ? (
@@ -103,7 +103,7 @@ const Projects = () => {
                     className={`${
                       project.type == "Featured Project"
                         ? "col-span-12"
-                        : "col-span-6"
+                        : "lg:col-span-6"
                     }`}
                   >
                     {project.type === "Featured Project" ? (
@@ -125,7 +125,7 @@ const Projects = () => {
                     className={`${
                       project.type == "Featured Project"
                         ? "col-span-12"
-                        : "col-span-6"
+                        : "lg:col-span-6"
                     }`}
                   >
                     {project.type === "Featured Project" ? (
