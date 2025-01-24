@@ -9,6 +9,7 @@ import { RiArrowDropRightFill } from "react-icons/ri";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
+import Link from "next/link";
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,7 +19,7 @@ const Projects = () => {
   // Add dynamic IDs to projects (latest projects on top)
   const projectsWithIds = projects.map((project, index) => ({
     ...project,
-    id: projects.length - index, // Assign IDs in reverse order
+    id: projects.length - index,
   }));
 
   // Filter projects by category
@@ -50,23 +51,23 @@ const Projects = () => {
           />
 
           {/* ShadCN Tabs */}
-          <Tabs defaultValue="all" className="w-full ">
-            <TabsList className="grid w-full grid-cols-3 mb-10 bg-orange-500 text-white ">
+          <Tabs defaultValue="all" className="">
+            <TabsList className="grid w-full grid-cols-3 mb-10 bg-orange-500 text-white">
               <TabsTrigger
                 value="all"
-                className="data-[state=active]:bg-amber-900 data-[state=active]:text-white"
+                className="data-[state=active]:bg-amber-900 data-[state=active]:text-white md:text-[10px]"
               >
                 All Projects
               </TabsTrigger>
               <TabsTrigger
                 value="personal"
-                className="data-[state=active]:bg-amber-900 data-[state=active]:text-white"
+                className="data-[state=active]:bg-amber-900 data-[state=active]:text-white lg:text-[10px]"
               >
                 Personal Projects
               </TabsTrigger>
               <TabsTrigger
                 value="client"
-                className="data-[state=active]:bg-amber-900 data-[state=active]:text-white"
+                className="data-[state=active]:bg-amber-900 data-[state=active]:text-white lg:text-[10px]"
               >
                 Client Projects
               </TabsTrigger>
@@ -74,15 +75,17 @@ const Projects = () => {
 
             {/* All Projects Tab */}
             <TabsContent value="all">
-              <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+              <div className="grid grid-cols-12 gap-6 sm:gap-4">
                 {projectsWithIds.map((project) => (
                   <div
                     key={project.id}
-                    className={`${
-                      project.type == "Featured Project"
-                        ? "col-span-12"
-                        : "lg:col-span-6"
-                    }`}
+                    className={`
+                      ${
+                        project.type === "Featured Project"
+                          ? "col-span-12"
+                          : "col-span-6 md:col-span-12"
+                      } mb-8
+                    `}
                   >
                     {project.type === "Featured Project" ? (
                       <FeaturedProject {...project} />
@@ -96,15 +99,17 @@ const Projects = () => {
 
             {/* Personal Projects Tab */}
             <TabsContent value="personal">
-              <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+              <div className="grid grid-cols-12 gap-6 sm:gap-4">
                 {personalProjects.map((project) => (
                   <div
                     key={project.id}
-                    className={`${
-                      project.type == "Featured Project"
-                        ? "col-span-12"
-                        : "lg:col-span-6"
-                    }`}
+                    className={`
+                      ${
+                        project.type === "Featured Project"
+                          ? "col-span-12"
+                          : "col-span-6 md:col-span-12"
+                      } mb-8
+                    `}
                   >
                     {project.type === "Featured Project" ? (
                       <FeaturedProject {...project} />
@@ -118,15 +123,17 @@ const Projects = () => {
 
             {/* Client Projects Tab */}
             <TabsContent value="client">
-              <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+              <div className="grid grid-cols-12 gap-6 sm:gap-4">
                 {clientProjects.map((project) => (
                   <div
                     key={project.id}
-                    className={`${
-                      project.type == "Featured Project"
-                        ? "col-span-12"
-                        : "lg:col-span-6"
-                    }`}
+                    className={`
+                      ${
+                        project.type === "Featured Project"
+                          ? "col-span-12"
+                          : "col-span-6 md:col-span-12"
+                      } mb-8
+                    `}
                   >
                     {project.type === "Featured Project" ? (
                       <FeaturedProject {...project} />
