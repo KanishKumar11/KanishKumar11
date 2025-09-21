@@ -5,41 +5,75 @@ import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import NextTopLoader from "nextjs-toploader";
 import SmoothScroll from "@/components/hooks/SmoothScroll";
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
 });
 
 export const metadata = {
-  title: "Kanish Kumar | Best Web Developer",
-  description:
-    "Hi, I'm a freelance web developer who can create stunning and user-friendly websites for any industry. I have skills in frontend and backend development, using HTML, CSS, JavaScript, NEXTJs, MYSQL, and WordPress. I can handle web design, development, maintenance, optimization, and hosting. I can deliver high-quality and responsive web solutions that suit your needs and budget. I love web development and learning new things. I communicate well, deliver on time, and satisfy customers. If you need a freelance web developer who can make your web vision a reality, please contact me. I’m excited to work with you on your next web project.",
-  keywords:
-    "web developer, frontend developer, backend developer, fullstack developer, nextjs developer, wordpress developer, freelance web developer",
-  image: "https://kanishkumar.in/images/KanishKumar.png",
-  twitter: {
-    handle: "@KanishKumar_11",
-    site: "@KanishKumar_11",
-    card: "summary_large_image",
+  metadataBase: new URL('https://kanishkumar.in'),
+  title: {
+    default: "Kanish Kumar - Full-Stack Developer",
+    template: "%s | Kanish Kumar - Full-Stack Developer"
   },
-  og: {
-    url: "https://kanishkumar.in/",
-    title: "Kanish Kumar | Best Web Developer",
-    description:
-      "Hi, I'm a freelance web developer who can create stunning and user-friendly websites for any industry. I have skills in frontend and backend development, using HTML, CSS, JavaScript, NEXTJs, MYSQL, and WordPress. I can handle web design, development, maintenance, optimization, and hosting. I can deliver high-quality and responsive web solutions that suit your needs and budget. I love web development and learning new things. I communicate well, deliver on time, and satisfy customers. If you need a freelance web developer who can make your web vision a reality, please contact me. I’m excited to work with you on your next web project.",
-    image: "https://kanishkumar.in/images/KanishKumar.png",
-    site_name: "Kanish Kumar | Best Web Developer",
-    type: "website",
+  description: "Full-stack developer specializing in mobile app development, web applications, WordPress sites, and AI integration. Expert in React Native, Next.js, and modern web technologies.",
+  keywords: [
+    "full-stack developer",
+    "React Native developer",
+    "Next.js developer",
+    "WordPress developer",
+    "mobile app development",
+    "web application development",
+    "AI integration",
+    "freelance developer",
+    "SaaS development",
+    "custom website development"
+  ],
+  authors: [{ name: "Kanish Kumar", url: "https://kanishkumar.in" }],
+  creator: "Kanish Kumar",
+  publisher: "Kanish Kumar",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
   openGraph: {
-    title: "Kanish Kumar | Best Web Developer",
-    type: "profile",
-    description:
-      "Hi, I'm a freelance web developer who can create stunning and user-friendly websites for any industry. I have skills in frontend and backend development, using HTML, CSS, JavaScript, NEXTJs, MYSQL, and WordPress. I can handle web design, development, maintenance, optimization, and hosting. I can deliver high-quality and responsive web solutions that suit your needs and budget. I love web development and learning new things. I communicate well, deliver on time, and satisfy customers. If you need a freelance web developer who can make your web vision a reality, please contact me. I’m excited to work with you on your next web project.",
-    url: "https://kanishkumar.in/",
-    siteName: "KanishKumar",
+    type: "website",
     locale: "en_US",
-    images: [{ url: "/KanishKumar.png", alt: "Kanish Kumar" }],
+    url: "https://kanishkumar.in",
+    title: "Kanish Kumar - Full-Stack Developer",
+    description: "Full-stack developer specializing in mobile app development, web applications, WordPress sites, and AI integration. Expert in React Native, Next.js, and modern web technologies.",
+    siteName: "Kanish Kumar Portfolio",
+    images: [
+      {
+        url: "/images/og/default-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kanish Kumar - Full-Stack Developer Portfolio",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kanish Kumar - Full-Stack Developer",
+    description: "Full-stack developer specializing in mobile app development, web applications, WordPress sites, and AI integration.",
+    creator: "@Kanishkumar_11",
+    images: ["/images/og/default-og.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // Add your actual verification code
   },
 };
 
@@ -48,52 +82,72 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="keywords" content={metadata.keywords} />
-        <meta name="image" content={metadata.image} />
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content={metadata.image} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta property="og:url" content={metadata.og.url} />
-        <meta property="og:title" content={metadata.og.title} />
-        <meta property="og:description" content={metadata.og.description} />
-        <meta property="og:image" content={metadata.og.image} />
-        <meta property="og:site_name" content={metadata.og.site_name} />
-        <meta property="og:type" content={metadata.og.type} />
-        <link rel="stylesheet" href="/styles/globals.css" />
-      </head>
-      <body
-        className={`${montserrat.className} bg-light dark:bg-dark relative`}
-      >
-        <Script id="theme-switcher" strategy="beforeInteractive">
-          {`
-          if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-          } else {
-            document.documentElement.classList.remove('dark')
-          }          `}
-        </Script>
+        <meta name="author" content="Kanish Kumar" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://kanishkumar.in" />
 
-        <Navbar />
+        {/* Favicon and App Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
 
-        <NextTopLoader
-          color="#ff4800"
-          initialPosition={0.7}
-          crawlSpeed={200}
-          height={3}
-          crawl={true}
-          showSpinner={true}
-          easing="ease"
-          speed={200}
-          shadow="0 0 10px #2299DD,0 0 5px #2299DD"
-          template='<div class="bar" role="bar"><div class="peg"></div></div> 
-  <div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
-          zIndex={1600}
-          showAtBottom={false}
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Structured Data for Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Kanish Kumar",
+              "url": "https://kanishkumar.in",
+              "sameAs": [
+                "https://twitter.com/Kanishkumar_11",
+                "https://github.com/KanishKumar11",
+                "https://linkedin.com/in/kanishkumar11"
+              ],
+              "jobTitle": "Full-Stack Developer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Freelance"
+              },
+              "knowsAbout": [
+                "React Native Development",
+                "Next.js Development",
+                "WordPress Development",
+                "Mobile App Development",
+                "Web Application Development",
+                "AI Integration"
+              ],
+              "description": "Full-stack developer specializing in mobile app development, web applications, WordPress sites, and AI integration."
+            })
+          }}
         />
-        {/* <SmoothScroll>{children}</SmoothScroll> */}
-        {children}
+      </head>
+      <body className={`${montserrat.variable} font-mont bg-light dark:bg-dark`}>
+        <NextTopLoader color="#f97316" showSpinner={false} />
+        {/* <SmoothScroll /> */}
+        <Navbar />
+        <main>{children}</main>
         <Footer />
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-GA-ID"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YOUR-GA-ID');
+          `}
+        </Script>
       </body>
     </html>
   );

@@ -27,6 +27,148 @@
   scroll-behavior: smooth;
 }
 
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Hide scrollbar for horizontal scrolling tabs */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+
+  /* Ensure touch targets are at least 44px */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve text readability on mobile */
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Enhanced horizontal scrolling for tabs */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* iOS momentum scrolling */
+  }
+
+  /* Snap scrolling for better UX */
+  .snap-x {
+    scroll-snap-type: x mandatory;
+  }
+
+  .snap-start {
+    scroll-snap-align: start;
+  }
+}
+
+/* Global scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Fade edges for horizontal scroll indication */
+.scroll-fade-edges {
+  position: relative;
+}
+
+.scroll-fade-edges::before,
+.scroll-fade-edges::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.scroll-fade-edges::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 149, 0, 0.9), transparent);
+}
+
+.scroll-fade-edges::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 149, 0, 0.9), transparent);
+}
+
+/* Hide fade edges on small screens where tabs wrap */
+@media (min-width: 640px) and (max-width: 767px) {
+  .scroll-fade-edges::before,
+  .scroll-fade-edges::after {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .scroll-fade-edges::before,
+  .scroll-fade-edges::after {
+    display: none;
+  }
+}
+
+/* Enhanced mobile tab interactions */
+@media (max-width: 639px) {
+  /* Improve touch feedback for mobile tabs */
+  [role="tablist"] button {
+    transform-origin: center;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  }
+
+  [role="tablist"] button:active {
+    transform: scale(0.95);
+  }
+
+  /* Better spacing for very small screens */
+  @media (max-width: 375px) {
+    [role="tablist"] {
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+      gap: 8px !important;
+    }
+  }
+}
+
+/* Fix for wrapped tabs background coverage */
+@media (min-width: 640px) and (max-width: 767px) {
+  /* Ensure background covers all wrapped rows */
+  [role="tablist"] {
+    min-height: auto;
+    align-content: flex-start;
+  }
+
+  /* Reduce vertical spacing when wrapping to prevent overflow */
+  [role="tablist"] button {
+    margin-bottom: 4px;
+  }
+
+  /* Ensure proper spacing between wrapped rows */
+  [role="tablist"] {
+    row-gap: 8px !important;
+  }
+}
+
+/* Prevent content overlap when tabs wrap */
+@media (max-width: 767px) {
+  .tabs-container {
+    margin-bottom: 2rem;
+  }
+
+  /* Ensure TabsList has enough space for wrapped content */
+  [role="tablist"] {
+    overflow: visible !important;
+  }
+}
+
 /* Track */
 ::-webkit-scrollbar {
   width: 12px;

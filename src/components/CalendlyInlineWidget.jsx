@@ -1,28 +1,47 @@
-// components/CalendlyInlineWidget.js
 "use client";
 import { useEffect } from "react";
 
-const CalendlyInlineWidget = () => {
+const CalInlineWidget = () => {
   useEffect(() => {
+    // Load Cal.com embed script
     const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.src = "https://app.cal.com/embed/embed.js";
     script.async = true;
-    document.body.appendChild(script);
+
+    script.onload = () => {
+      // Initialize Cal embed after script loads
+      if (window.Cal) {
+        window.Cal("init", {
+          origin: "https://app.cal.com"
+        });
+      }
+    };
+
+    document.head.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      // Cleanup
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
 
   return (
-    <div className="h-auto">
-      <div
-        className="calendly-inline-widget h-[680px] lg:h-[950px] lg:mt-5 rounded-xl"
-        data-url="https://calendly.com/kanishkumar/meet"
-        style={{ minWidth: "320px", borderRadius: "20px" }}
-      ></div>
+    <div className="h-auto mt-5">
+      <iframe
+        src="https://cal.com/kanishkumar/30min"
+        className="h-[680px] lg:h-[950px] lg:mt-5 rounded-xl w-full"
+        style={{
+          minWidth: "320px",
+          borderRadius: "20px",
+          border: "none"
+        }}
+        loading="lazy"
+        title="Book a call with Kanish Kumar"
+      />
     </div>
   );
 };
 
-export default CalendlyInlineWidget;
+export default CalInlineWidget;

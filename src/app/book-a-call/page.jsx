@@ -1,7 +1,7 @@
 import React from "react";
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
-import CalendlyInlineWidget from "@/components/CalendlyInlineWidget";
+import CalInlineWidget from "@/components/CalendlyInlineWidget";
 
 const BookACall = () => {
   return (
@@ -19,7 +19,7 @@ const BookACall = () => {
             interests, I'm here for it. Select a time that works for you, and
             let's make it happen. I look forward to our conversation!
           </p>
-          <CalendlyInlineWidget />
+          <CalInlineWidget />
         </Layout>
       </main>
     </div>

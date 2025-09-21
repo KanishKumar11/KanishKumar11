@@ -5,7 +5,7 @@ export default function SmoothScroll({ children }) {
     <ReactLenis
       root
       options={{
-        duration: 1.5,
+        // duration: 1.5,
       }}
     >
       {children}

@@ -1,225 +1,322 @@
 export const projects = [
+  // FEATURED PROJECTS - Most impressive work across all categories
   {
     id: 1,
-    title: "Zlaark Testimonials",
+    title: "UnextDoor - AI Language Tutor",
     summary:
-      "Zlaark Testimonials is a platform that empowers freelancers and businesses to effortlessly collect, organize, and showcase authentic customer testimonials. With features designed to simplify the process, you can create customized testimonial boards, share them across platforms, and build trust with your audience to grow your brand.",
+      "UnextDoor is an innovative AI-powered real-time language tutoring platform that combines mobile app development with advanced AI integration. The iOS app (live on App Store) provides personalized language learning experiences using cutting-edge AI technology, while the WordPress landing page showcases the product professionally. This project demonstrates full-stack capabilities including mobile development with Expo/React Native, AI integration, and WordPress development.",
+    link: "https://unextdoor.co/",
+    appStoreLink: "https://apps.apple.com/us/app/unextdoor/id6747754809?platform=iphone",
+    type: "Featured Project",
+    img: "/images/projects/unextdoor.png",
+    github: "",
+    category: "mobile-apps",
+    technologies: ["React Native", "Expo", "AI Integration", "WordPress"],
+    isLiveApp: true,
+  },
+  {
+    id: 2,
+    title: "Zlaark Testimonials Platform",
+    summary:
+      "Zlaark Testimonials is a comprehensive SaaS platform that empowers freelancers and businesses to effortlessly collect, organize, and showcase authentic customer testimonials. Built with modern web technologies, it features customized testimonial boards, social sharing capabilities, and analytics dashboard. This platform demonstrates full-stack SaaS development skills with user authentication, data management, and scalable architecture.",
     link: "https://zlaark.com",
     type: "Featured Project",
     img: "/images/projects/zlaark.png",
     github: "",
-    category: "personal",
+    category: "web-applications",
+    technologies: ["Next.js", "React", "SaaS", "Database"],
   },
   {
-    id: 1,
+    id: 3,
     title: "Zlaark Expense Manager App",
     summary:
-      "Zlaark is an advanced expense management application built using Next.js and React. Leveraging ShadCN UI, the interface is clean, modern, and intuitive. Zod ensures robust form validation, providing a seamless user experience. The integration of React Query enables efficient data fetching, caching, and synchronization, ensuring the app remains responsive and reliable. Zlaark empowers users to manage their finances with ease, offering insightful analytics and real-time expense tracking.",
+      "Zlaark is an advanced expense management SaaS application built using Next.js and React. Leveraging ShadCN UI, the interface is clean, modern, and intuitive. Zod ensures robust form validation, providing a seamless user experience. The integration of React Query enables efficient data fetching, caching, and synchronization, ensuring the app remains responsive and reliable. Features include real-time expense tracking, analytics dashboard, and financial insights.",
     link: "https://zlaark.kanishkumar.in/",
     type: "Featured Project",
     img: "/images/projects/project-8.png",
     github: "https://github.com/KanishKumar11/Zlaark-Expense-Manager/",
-    category: "personal",
-  },
-
-  {
-    id: 1,
-    title: "Hypeworx",
-    summary:
-      "A custom-coded website for Hypeworx, a digital marketing agency. Built with modern web technologies, the site features a dynamic design, smooth animations, and responsive layouts.",
-    link: "https://hypeworx.in/",
-    type: "Featured Project",
-    img: "/images/projects/hypeworx.png", // Update the image path
-    github: "", // Add GitHub link if available
-    category: "client",
-  },
-  {
-    id: 2,
-    title: "MyBezu",
-    summary:
-      "Bezu Ai is a Real-Time Video Chats App with Lifelike AI Characters. I developed thier landing page.",
-    link: "https://www.mybezu.com/",
-    type: "Landing Page",
-    img: "/images/projects/mybezu.png", // Update the image path
-    github: "", // Add GitHub link if available
-    category: "client",
-  },
-  {
-    id: 3,
-    title: "The DevOps Story",
-    summary: "A landing page developed for book launch of Dev Ops Story.",
-    link: "https://thedevopsstory.com/",
-    type: "Landing Page",
-    img: "/images/projects/devopsstory.png", // Update the image path
-    github: "", // Add GitHub link if available
-    category: "client",
+    category: "web-applications",
+    technologies: ["Next.js", "React", "ShadCN UI", "React Query", "Zod"],
   },
   {
     id: 4,
-    title: "Inovact",
+    title: "Hypeworx Digital Agency",
     summary:
-      "Inovact is a social networking app for entrepreneurs. I developed a landing page for them",
-    link: "https://www.inovact.in/",
-    type: "Landing Page",
-    img: "/images/projects/inovact.png", // Update the image path
-    github: "", // Add GitHub link if available
-    category: "client",
+      "A custom-coded website for Hypeworx, a digital marketing agency. Built with modern web technologies, the site features a dynamic design, smooth animations, and responsive layouts. The project showcases advanced frontend development skills with custom animations, performance optimization, and mobile-first design approach.",
+    link: "https://hypeworx.in/",
+    type: "Featured Project",
+    img: "/images/projects/hypeworx.png",
+    github: "",
+    category: "custom-websites",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
   },
   {
     id: 5,
-    title: "Lincify Media",
+    title: "Dual-Front E-commerce Platform",
     summary:
-      "A custom-coded website for Lincify Media, a media and marketing agency. The site features a dynamic design, portfolio showcase, and responsive layouts to highlight their services.",
-    link: "https://lincifymedia.com/",
-    type: "Landing Page",
-    img: "/images/projects/lincifymedia.png", // Update the image path
-    github: "", // Add GitHub link if available
-    category: "client",
-  },
-  {
-    id: 6,
-    title: "Tax By Akaram",
-    summary:
-      "A custom-coded website for Tax By Akaram, a tax consultancy firm. The site includes service listings, client testimonials, and a professional design to build trust with clients.",
-    link: "https://taxbyakaram.netlify.app/",
-    type: "Landing Page",
-    img: "/images/projects/taxbyakram.png", // Update the image path
-    github: "", // Add GitHub link if available
-    category: "client",
+      "This project showcases the integration of cutting-edge technologies to deliver a robust, scalable, and aesthetically pleasing e-commerce solution. Features both customer-facing store and comprehensive admin dashboard. Built with ReactJS, NextJS, Tailwind CSS, and Shadcn components. The backend leverages Prisma with MySQL for efficient data management. Demonstrates full-stack e-commerce development with dual frontend architecture.",
+    linkAdmin: "https://ecommerce-admin-kanishkumar11.vercel.app/",
+    linkStore: "https://ecommerce-store-kanishkumar11.vercel.app/",
+    type: "Featured Project",
+    img: "/images/projects/project-7.webp",
+    githubAdmin: "https://github.com/KanishKumar11/ecommerce-admin",
+    githubStore: "https://github.com/KanishKumar11/ecommerce-store",
+    category: "web-applications",
+    technologies: ["Next.js", "React", "Prisma", "MySQL", "Tailwind CSS"],
   },
 
-  // Client WordPress Projects
+  // CUSTOM WEBSITES - Custom coded landing pages and websites
+  {
+    id: 6,
+    title: "Electric Marshmallow",
+    summary:
+      "A creative and visually striking custom-coded landing page for Electric Marshmallow. Built with pure HTML, CSS, and JavaScript, showcasing advanced frontend development skills with custom animations, interactive elements, and modern design principles. The project demonstrates expertise in creating unique, brand-focused web experiences without relying on frameworks.",
+    link: "https://electricmarshmallow.com/",
+    type: "Landing Page",
+    img: "/images/projects/electricmarshmallow.png",
+    github: "",
+    category: "custom-websites",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Custom Animations"],
+  },
   {
     id: 7,
-    title: "Lincify",
+    title: "MyBezu AI Platform",
     summary:
-      "A WordPress website for Lincify, a digital marketing agency. The site features a modern design, responsive layout, and seamless navigation to showcase their services and portfolio.",
-    link: "https://lincify.in/",
-    type: "WordPress Project",
-    img: "/images/projects/lincify.png", // Update the image path
-    github: "", // No GitHub link for WordPress projects
-    category: "client",
+      "Landing page for Bezu AI, a Real-Time Video Chats App with Lifelike AI Characters. The custom-coded landing page effectively communicates the innovative AI technology and user experience, featuring modern design elements and clear value propositions for this cutting-edge AI platform.",
+    link: "https://www.mybezu.com/",
+    type: "Landing Page",
+    img: "/images/projects/mybezu.png",
+    github: "",
+    category: "custom-websites",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
   },
   {
     id: 8,
-    title: "LancerX",
-    summary:
-      "A WordPress website for LancerX, a freelancing platform. The site includes user-friendly navigation, service listings, and a clean design to attract freelancers and clients.",
-    link: "https://lancerx.in/",
-    type: "WordPress Project",
-    img: "/images/projects/lancerx.png", // Update the image path
-    github: "", // No GitHub link for WordPress projects
-    category: "client",
-  },
-  {
-    id: 11,
-    title: "Fenkmat",
-    summary: "A WordPress website for Fenkmat, a news website. ",
-    link: "https://fenkmat.com/",
-    type: "WordPress Project",
-    img: "/images/projects/fenkmat.png", // Update the image path
-    github: "", // No GitHub link for WordPress projects
-    category: "client",
+    title: "The DevOps Story",
+    summary: "A professional landing page developed for the book launch of 'The DevOps Story'. Features clean typography, engaging layout, and conversion-optimized design to promote the book and drive sales. Built with modern web standards and optimized for performance across all devices.",
+    link: "https://thedevopsstory.com/",
+    type: "Landing Page",
+    img: "/images/projects/devopsstory.png",
+    github: "",
+    category: "custom-websites",
+    technologies: ["HTML5", "CSS3", "JavaScript", "SEO Optimization"],
   },
   {
     id: 9,
-    title: "Gupta's Tutorial",
+    title: "Inovact Social Platform",
     summary:
-      "A WordPress landing page for Gupta's Tutorial, an educational platform. The site features course listings, testimonials, and a responsive design to cater to students and educators.",
-    link: "https://guptastutorial.com/",
-    type: "WordPress Project",
-    img: "/images/projects/guptatutorials.png", // Update the image path
-    github: "", // No GitHub link for WordPress projects
-    category: "client",
+      "Landing page for Inovact, a social networking app designed for entrepreneurs. The site effectively showcases the app's features and benefits, with a focus on community building and networking capabilities. Features modern design, clear call-to-actions, and mobile-optimized layout.",
+    link: "https://www.inovact.in/",
+    type: "Landing Page",
+    img: "/images/projects/inovact.png",
+    github: "",
+    category: "custom-websites",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Mobile-First Design"],
   },
   {
     id: 10,
-    title: "Yohr Consultancy",
-    summary: "A WordPress website for Yohr Consultancy, a HR consulting firm. ",
-    link: "https://www.yohrconsultancy.com/",
-    type: "WordPress Project",
-    img: "/images/projects/yohrconsultancy.png", // Update the image path
-    github: "", // No GitHub link for WordPress projects
-    category: "client",
+    title: "Lincify Media Agency",
+    summary:
+      "A custom-coded website for Lincify Media, a media and marketing agency. The site features a dynamic design, comprehensive portfolio showcase, and responsive layouts to effectively highlight their creative services. Includes advanced animations and interactive elements to engage visitors.",
+    link: "https://lincifymedia.com/",
+    type: "Landing Page",
+    img: "/images/projects/lincifymedia.png",
+    github: "",
+    category: "custom-websites",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Animation Libraries"],
+  },
+  {
+    id: 11,
+    title: "Tax By Akaram Consultancy",
+    summary:
+      "A custom-coded website for Tax By Akaram, a professional tax consultancy firm. The site includes comprehensive service listings, client testimonials, and a professional design built to establish trust and credibility with potential clients. Features contact forms and service inquiry functionality.",
+    link: "https://taxbyakaram.netlify.app/",
+    type: "Landing Page",
+    img: "/images/projects/taxbyakram.png",
+    github: "",
+    category: "custom-websites",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Form Handling"],
   },
 
+  // WORDPRESS SITES - WordPress development projects
   {
-    id: 3,
+    id: 12,
+    title: "Shivmani Creations E-commerce",
+    summary:
+      "A comprehensive WordPress e-commerce website for Shivmani Creations, featuring full online store functionality with product catalog, shopping cart, payment integration, and order management. Built with WooCommerce, the site includes custom design elements, responsive layout, and optimized user experience for both desktop and mobile shoppers.",
+    link: "https://shivmanicreations.com/",
+    type: "WordPress E-commerce",
+    img: "/images/projects/shivmanicreations.png",
+    github: "",
+    category: "wordpress-sites",
+    technologies: ["WordPress", "WooCommerce", "PHP", "MySQL"],
+  },
+  {
+    id: 13,
+    title: "Best Diet - Health & Nutrition",
+    summary:
+      "A professional WordPress landing page for Best Diet, a health and nutrition consultancy. Features clean, health-focused design with service information, nutritionist profiles, and contact forms. Optimized for lead generation with clear call-to-actions and mobile-responsive design.",
+    link: "https://bestdiet.in/",
+    type: "WordPress Landing Page",
+    img: "/images/projects/bestdiet.png",
+    github: "",
+    category: "wordpress-sites",
+    technologies: ["WordPress", "Custom Theme", "SEO Optimization"],
+  },
+  {
+    id: 14,
+    title: "Dentist Pitampura",
+    summary:
+      "A professional WordPress website for a dental practice in Pitampura. Features appointment booking system, service descriptions, doctor profiles, and patient testimonials. Designed with healthcare industry best practices and optimized for local SEO to attract nearby patients.",
+    link: "https://dentistpitampura.com/",
+    type: "WordPress Landing Page",
+    img: "/images/projects/dentistpitampura.png",
+    github: "",
+    category: "wordpress-sites",
+    technologies: ["WordPress", "Appointment System", "Local SEO"],
+  },
+  {
+    id: 15,
+    title: "Shivai Telerad - Medical Services",
+    summary:
+      "A specialized WordPress website for Shivai Telerad, providing teleradiology and medical imaging services. Features professional medical design, service portfolios, and secure contact systems. Built with healthcare compliance considerations and optimized for medical professionals.",
+    link: "https://shivaitelerad.com/",
+    type: "WordPress Landing Page",
+    img: "/images/projects/shivaitelerad.png",
+    github: "",
+    category: "wordpress-sites",
+    technologies: ["WordPress", "Medical Theme", "Security Features"],
+  },
+  {
+    id: 16,
+    title: "Lincify Digital Agency",
+    summary:
+      "A WordPress website for Lincify, a digital marketing agency. The site features a modern design, responsive layout, and seamless navigation to showcase their comprehensive digital marketing services and client portfolio. Includes service pages, case studies, and lead generation forms.",
+    link: "https://lincify.in/",
+    type: "WordPress Project",
+    img: "/images/projects/lincify.png",
+    github: "",
+    category: "wordpress-sites",
+    technologies: ["WordPress", "Custom Design", "Portfolio Showcase"],
+  },
+  {
+    id: 17,
+    title: "LancerX Freelancing Platform",
+    summary:
+      "A WordPress website for LancerX, a freelancing platform connecting clients with skilled professionals. The site includes user-friendly navigation, detailed service listings, freelancer profiles, and a clean design optimized to attract both freelancers and potential clients.",
+    link: "https://lancerx.in/",
+    type: "WordPress Project",
+    img: "/images/projects/lancerx.png",
+    github: "",
+    category: "wordpress-sites",
+    technologies: ["WordPress", "User Profiles", "Service Listings"],
+  },
+  {
+    id: 18,
+    title: "Fenkmat News Portal",
+    summary: "A WordPress-powered news website for Fenkmat, featuring article management, category organization, and responsive design. Built with news-specific functionality including article search, social sharing, and optimized loading for content-heavy pages.",
+    link: "https://fenkmat.com/",
+    type: "WordPress Project",
+    img: "/images/projects/fenkmat.png",
+    github: "",
+    category: "wordpress-sites",
+    technologies: ["WordPress", "News Theme", "Content Management"],
+  },
+  {
+    id: 19,
+    title: "Gupta's Tutorial Education Platform",
+    summary:
+      "A WordPress landing page for Gupta's Tutorial, an educational platform offering various courses. The site features comprehensive course listings, student testimonials, instructor profiles, and a responsive design optimized to serve both students and educators effectively.",
+    link: "https://guptastutorial.com/",
+    type: "WordPress Project",
+    img: "/images/projects/guptatutorials.png",
+    github: "",
+    category: "wordpress-sites",
+    technologies: ["WordPress", "Education Theme", "Course Listings"],
+  },
+  {
+    id: 20,
+    title: "Yohr Consultancy HR Services",
+    summary: "A professional WordPress website for Yohr Consultancy, a HR consulting firm specializing in recruitment and human resource management. Features service descriptions, company information, and professional design tailored for B2B clients.",
+    link: "https://www.yohrconsultancy.com/",
+    type: "WordPress Project",
+    img: "/images/projects/yohrconsultancy.png",
+    github: "",
+    category: "wordpress-sites",
+    technologies: ["WordPress", "Business Theme", "HR Services"],
+  },
+
+  // PERSONAL PROJECTS - Portfolio and learning projects
+  {
+    id: 21,
     title: "Modern Web3 Metaverse Landing Page",
     summary:
-      "This Modern Web3 Metaverse Landing Page demonstrates my expertise in utilizing cutting-edge technologies. With Next.js 13, I built a performant web application with smooth navigation. Using Tailwind CSS, I crafted a visually stunning interface with customizable components. Framer Motion added engaging animations for a dynamic user experience. The landing page is responsive, providing a consistent look across devices. This project highlights my ability to create outstanding interfaces using the latest front-end tools and frameworks.",
+      "This Modern Web3 Metaverse Landing Page demonstrates expertise in utilizing cutting-edge technologies. Built with Next.js 13 for optimal performance and smooth navigation, styled with Tailwind CSS for a visually stunning interface, and enhanced with Framer Motion for engaging animations. The landing page is fully responsive and showcases advanced frontend development skills with modern tools and frameworks.",
     link: "https://kanishkumar11.github.io/metaverse-landing-page/",
-    type: "Featured Project",
+    type: "Landing Page",
     img: "/images/projects/project-1.webp",
     github: "https://github.com/KanishKumar11/metaverse-landing-page/",
     category: "personal",
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
   },
   {
-    id: 4,
+    id: 22,
     title: "Modern Bank Landing Page",
     summary:
-      "Explore the perfect blend of technology and aesthetics as ReactJS drives the dynamic frontend, while Tailwind CSS ensures a fully responsive and visually captivating design. Witness the future of online banking unfold in real-time as users navigate an interface that adapts flawlessly across devices, providing an optimal experience for all clients. This project serves as a testament to the power of React and Tailwind CSS in creating a modern and functional banking landing page that sets a new standard for user experience in the digital age.",
+      "A sophisticated banking landing page showcasing the perfect blend of technology and aesthetics. ReactJS drives the dynamic frontend, while Tailwind CSS ensures a fully responsive and visually captivating design. The interface adapts flawlessly across devices, demonstrating modern web development best practices and setting new standards for financial service websites.",
     link: "https://bank-landing-page-kanishkumar11.vercel.app/",
     type: "Landing Page",
     img: "/images/projects/project-2.webp",
     github: "https://github.com/KanishKumar11/bank-landing-page/",
     category: "personal",
+    technologies: ["React", "Tailwind CSS", "Responsive Design"],
   },
   {
-    id: 5,
-    title: "E-learning Landing Page EduWeb",
+    id: 23,
+    title: "EduWeb E-learning Platform",
     summary:
-      "EduWeb is a dynamic E-learning Landing Page crafted with Next.js, React, and Tailwind CSS. This project showcases my proficiency in front-end development, leveraging the power of React for interactive user interfaces, Next.js for seamless navigation, and Tailwind CSS for a modern and responsive design. The EduWeb landing page is designed to provide an engaging and user-friendly experience for learners, featuring intuitive navigation and a visually appealing layout. Through this project, I demonstrate my skills in creating compelling web solutions that enhance the online education experience.",
+      "EduWeb is a dynamic E-learning Landing Page crafted with Next.js, React, and Tailwind CSS. This project showcases proficiency in modern frontend development, featuring interactive user interfaces, seamless navigation, and responsive design. The platform provides an engaging user experience for learners with intuitive navigation and visually appealing layouts.",
     link: "https://kanish-e-learn.netlify.app/",
     type: "Landing Page",
     img: "/images/projects/project-6.webp",
     github: "https://github.com/KanishKumar11/e-learn",
     category: "personal",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
   },
   {
-    id: 6,
-    title: "Modern Resume Website",
+    id: 24,
+    title: "Interactive Resume Website",
     summary:
-      "This website is built using HTML, CSS, and JavaScript to create an interactive online resume. With HTML, I structured the content, while CSS provided styling and visual presentation. JavaScript added interactivity like smooth scrolling and animated transitions. The website is optimized for different devices, adhering to web standards and best practices.",
+      "An interactive online resume built with HTML, CSS, and JavaScript. Features smooth scrolling, animated transitions, and responsive design optimized for all devices. The website demonstrates fundamental web development skills while adhering to modern web standards and best practices.",
     link: "https://kanishkumar11.github.io/resume/",
     type: "Resume",
     img: "/images/projects/project-4.webp",
     github: "https://github.com/KanishKumar11/resume/",
     category: "personal",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
   },
   {
-    id: 7,
-    title: "Sudoku Game",
+    id: 25,
+    title: "Sudoku Game Application",
     summary:
-      "A classic Sudoku game built with HTML, CSS, and JavaScript. This project demonstrates my ability to create interactive and engaging web applications. The game features a clean and intuitive interface, with responsive design for seamless gameplay across devices.",
+      "A classic Sudoku game built with HTML, CSS, and JavaScript. Features a clean and intuitive interface with responsive design for seamless gameplay across devices. Demonstrates ability to create interactive and engaging web applications with game logic and user interface design.",
     link: "https://kanishkumar11.github.io/sudoku/",
     type: "Game",
     img: "/images/projects/project-5.webp",
     github: "https://github.com/KanishKumar11/sudoku",
     category: "personal",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Game Logic"],
   },
   {
-    id: 8,
+    id: 26,
     title: "Portfolio Website Design",
     summary:
-      "A modern and responsive portfolio website designed to showcase my skills and projects. Built with HTML, CSS, and JavaScript, this project highlights my expertise in front-end development and design. The website features a clean layout, smooth animations, and a user-friendly interface.",
+      "A modern and responsive portfolio website designed to showcase development skills and projects. Built with HTML, CSS, and JavaScript, featuring clean layouts, smooth animations, and user-friendly interfaces. Highlights expertise in frontend development and modern design principles.",
     link: "https://kanishkumar11.github.io/portfolio-website/",
     type: "Portfolio Website",
     img: "/images/projects/project-3.webp",
     github: "https://github.com/KanishKumar11/portfolio-website",
     category: "personal",
-  },
-  {
-    id: 2,
-    title: "Dual-Front E-commerce: User Store & Admin Dashboard",
-    summary:
-      "This project showcases the integration of cutting-edge technologies to deliver a robust, scalable, and aesthetically pleasing e-commerce solution. Explore the seamless synergy between ReactJS and NextJS, coupled with the responsive design facilitated by Tailwind CSS and Shadcn. The backend leverages the power of Prisma with MySQL, ensuring efficient data management and retrieval. Whether you're a customer navigating the store or an admin streamlining operations, this project exemplifies the synergy of modern web development technologies.",
-    linkAdmin: "https://ecommerce-admin-kanishkumar11.vercel.app/",
-    linkStore: "https://ecommerce-store-kanishkumar11.vercel.app/",
-    type: "E-commerce Platform with Dual Frontends",
-    img: "/images/projects/project-7.webp",
-    githubAdmin: "https://github.com/KanishKumar11/ecommerce-admin",
-    githubStore: "https://github.com/KanishKumar11/ecommerce-store",
-    category: "personal",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
   },
 ];

@@ -12,9 +12,7 @@ import Loading from "@/components/Loading";
 import dynamic from "next/dynamic";
 import Cilentele from "@/components/Clientele";
 
-const DynamicProjects = dynamic(() => import("./projects/page.jsx"), {
-  loading: () => <Loading />,
-});
+
 const DynamicAbout = dynamic(() => import("./about/page.jsx"), {
   loading: () => <Loading />,
 });
@@ -86,7 +84,7 @@ export default function Home() {
         </div>
       </main>
       <Cilentele />
-      <DynamicProjects />
+
       <DynamicAbout />
     </>
   );
