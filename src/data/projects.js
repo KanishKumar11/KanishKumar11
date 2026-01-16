@@ -1,29 +1,42 @@
 export const projects = [
   // FEATURED PROJECTS - Most impressive work across all categories
   {
+    id: 100,
+    title: "Zlaark Digital Agency",
+    summary:
+      "Award-winning digital agency landing page crafted with premium aesthetics. Features immersive dark theme, smooth Framer Motion animations, and a luxury-focused design that showcases web development, mobile apps, and e-commerce services. Strategy • Design • Motion.",
+    link: "https://zlaark.com",
+    type: "Featured Project",
+    img: "/images/projects/zlaark-agency.png",
+    github: "",
+    category: "web-applications",
+    technologies: ["Next.js", "Framer Motion", "Tailwind CSS"],
+    isLiveApp: true,
+  },
+  {
     id: 101,
     title: "Gessure",
     summary:
-      "A revolutionary AI-driven gesture recognition platform tailored for accessibility and immersive control. Gessure translates physical hand movements into digital commands with near-zero latency, enabling touchless interfaces for smart devices and specialized applications.",
-    link: "https://gessure.ai", // Placeholder
+      "India's homegrown professional networking alternative. A revolutionary platform built with React Native and Next.js, providing seamless networking experiences for professionals across India. Developed at Zlaark agency.",
+    link: "https://zlaark.com/work/GESSURE",
     type: "Featured Project",
-    img: "https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=2664&auto=format&fit=crop", // Placeholder
+    img: "/images/projects/gessure.png",
     github: "",
-    category: "ai-ml",
-    technologies: ["Python", "TensorFlow", "OpenCV", "React"],
+    category: "mobile-apps",
+    technologies: ["React Native", "Next.js", "Node.js"],
     isLiveApp: true,
   },
   {
     id: 102,
-    title: "AssureQAI",
+    title: "Assure QAI",
     summary:
-      "AssureQAI is an enterprise-grade automated quality assurance platform powered by generative AI. It autonomously generates test cases, detects anomalies in codebases, and provides predictive insights to prevent bugs before deployment, streamlining the entire CI/CD pipeline.",
-    link: "https://assureqai.com", // Placeholder
+      "Intelligent quality assurance platform for automated testing. Built with Next.js, Python, and AWS, this enterprise-grade solution autonomously generates test cases, detects anomalies, and provides predictive insights to prevent bugs before deployment. Developed at Zlaark agency.",
+    link: "https://zlaark.com/work/ASSURE%20QAI",
     type: "Featured Project",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop", // Placeholder
+    img: "/images/projects/assureqai.png",
     github: "",
     category: "ai-ml",
-    technologies: ["Node.js", "LangChain", "OpenAI API", "Next.js"],
+    technologies: ["Next.js", "Python", "AWS"],
     isLiveApp: true,
   },
   {

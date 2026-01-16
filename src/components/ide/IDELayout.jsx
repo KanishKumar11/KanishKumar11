@@ -81,8 +81,8 @@ const Explorer = ({ files, onSelect }) => {
               key={file.id}
               onClick={() => onSelect(file.id)}
               className={`flex items-center gap-2 py-1 px-4 pl-6 cursor-pointer text-sm transition-colors border-l-2 ${activeFile === file.id
-                  ? "bg-[#37373d] text-white border-blue-400"
-                  : "text-[#969696] border-transparent hover:bg-[#2a2d2e] hover:text-[#cccccc]"
+                ? "bg-[#37373d] text-white border-blue-400"
+                : "text-[#969696] border-transparent hover:bg-[#2a2d2e] hover:text-[#cccccc]"
                 }`}
             >
               <file.icon size={14} className={file.color} />
@@ -106,8 +106,8 @@ const TabBar = ({ files }) => {
           key={file.id}
           onClick={() => setActiveFile(file.id)}
           className={`flex items-center gap-2 px-3 h-full min-w-[100px] border-r border-[#1e1e1e] text-sm cursor-pointer select-none ${activeFile === file.id
-              ? "bg-[#1e1e1e] text-white border-t-2 border-t-blue-400"
-              : "bg-[#2d2d2d] text-[#969696] hover:bg-[#1e1e1e]"
+            ? "bg-[#1e1e1e] text-white border-t-2 border-t-blue-400"
+            : "bg-[#2d2d2d] text-[#969696] hover:bg-[#1e1e1e]"
             }`}
         >
           <file.icon size={14} className={file.color} />
@@ -255,7 +255,7 @@ export default function IDELayout() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="h-full w-full overflow-y-auto"
+                    className="h-full w-full overflow-y-auto custom-scrollbar"
                   >
                     {ActiveComponent && <ActiveComponent onNavigate={setActiveFile} />}
                   </motion.div>

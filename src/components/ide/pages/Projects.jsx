@@ -189,7 +189,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="h-full flex flex-col bg-[#0d0d0d] text-[#c9d1d9] font-sans relative overflow-y-auto custom-scrollbar">
+    <div className="min-h-full flex flex-col bg-[#0d0d0d] text-[#c9d1d9] font-sans relative">
 
       {/* Background Noise Only - Removed Grid */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 pointer-events-none" />
