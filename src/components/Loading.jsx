@@ -1,31 +1,58 @@
 "use client";
-import React from "react";
-import { Skeleton } from "@mui/material";
-import Layout from "@/components/Layout";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Loading = () => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    // Simulate loading progress
+    const duration = 1500; // ms
+    const intervalTime = 20;
+    const steps = duration / intervalTime;
+    const increment = 100 / steps;
+
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        const next = prev + increment;
+        if (next >= 100) {
+          clearInterval(timer);
+          return 100;
+        }
+        return next;
+      });
+    }, intervalTime);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <>
-      <main className="flex items-center text-dark w-full min-h-screen bg-light dark:bg-dark dark:text-light">
-        <Layout className="!pt-0 md:!pt-16 sm:!p-8 xl:px-36 ">
-          <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="w-1/2 md:w-full">
-              <Skeleton className="w-[568px] rounded-full h-[768px]" />
-            </div>
-            <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
-              <Skeleton className="w-full h-12 rounded-sm" />
-              <Skeleton className="w-full h-12 rounded-sm" />
-              <Skeleton className="w-full h-12 rounded-sm" />
-              <Skeleton className="w-full h-40 mt-10 rounded-sm" />
-              <div className="flex items-center self-center mt-2 gap-5 lg:self-center">
-                <Skeleton className="w-20 h-10 rounded-md" />
-                <Skeleton className="w-20 h-10 rounded-md" />
-              </div>
-            </div>
-          </div>
-        </Layout>
-      </main>
-    </>
+    <motion.div
+      className="fixed inset-0 z-[99999] bg-[#050505] flex flex-col items-center justify-center text-white cursor-wait"
+      exit={{ y: "-100%", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
+    >
+      <div className="relative overflow-hidden">
+        <motion.h1
+          className="text-[15vw] leading-none font-black mix-blend-difference"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+        >
+          {Math.round(progress)}
+        </motion.h1>
+      </div>
+
+      <div className="flex flex-col items-center gap-2 mt-4 font-mono text-xs text-neutral-500 tracking-widest uppercase">
+        <p>
+          {progress < 100 ? "Loading Assets" : "System Ready"}
+        </p>
+        <div className="w-24 h-[1px] bg-neutral-800 relative overflow-hidden">
+          <motion.div
+            className="absolute inset-y-0 left-0 bg-white"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+      </div>
+    </motion.div>
   );
 };
 

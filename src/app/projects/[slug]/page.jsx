@@ -7,7 +7,8 @@ import { generateProjectMetadata, generateProjectStructuredData, getCategoryDisp
 import Breadcrumb from '@/components/Breadcrumb';
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const project = getProjectBySlug(params.slug);
 
   if (!project) {
@@ -28,7 +29,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }) {
+export default async function ProjectPage(props) {
+  const params = await props.params;
   const project = getProjectBySlug(params.slug);
 
   if (!project) {

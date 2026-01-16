@@ -1,10 +1,12 @@
-import Navbar from "@/components/Navbar";
+import FloatingNav from "@/components/FloatingNav";
+import CustomCursor from "@/components/CustomCursor";
 import Footer from "@/components/Footer";
 import "../styles/globals.css";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import NextTopLoader from "nextjs-toploader";
 import SmoothScroll from "@/components/hooks/SmoothScroll";
+import NoiseOverlay from "@/components/NoiseOverlay";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -79,7 +81,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta name="keywords" content={metadata.keywords} />
         <meta name="author" content="Kanish Kumar" />
@@ -128,12 +130,14 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${montserrat.variable} font-mont bg-light dark:bg-dark`}>
-        <NextTopLoader color="#f97316" showSpinner={false} />
-        {/* <SmoothScroll /> */}
-        <Navbar />
+      <body className={`${montserrat.variable} font-mont bg-black text-white selection:bg-blue-500/30`}>
+        <NextTopLoader color="#3b82f6" showSpinner={false} />
+        <NoiseOverlay />
+        <CustomCursor />
+
+
         <main>{children}</main>
-        <Footer />
+
 
         {/* Google Analytics */}
         <Script

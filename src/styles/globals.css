@@ -2,249 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-*::selection {
-  background-color: rgb(255, 149, 0);
-  color: white;
-}
-*::selection .dark {
-  background-color: rgba(255, 72, 0);
-  color: white;
-}
-* {
-  scroll-behavior: smooth;
-}
-
-/* Mobile-specific optimizations */
-@media (max-width: 768px) {
-  /* Hide scrollbar for horizontal scrolling tabs */
-  .scrollbar-hide {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-  }
-
-  /* Ensure touch targets are at least 44px */
-  button, a, [role="button"] {
-    min-height: 44px;
-    min-width: 44px;
-  }
-
-  /* Improve text readability on mobile */
-  body {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-
-  /* Enhanced horizontal scrolling for tabs */
-  .scroll-smooth {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* iOS momentum scrolling */
-  }
-
-  /* Snap scrolling for better UX */
-  .snap-x {
-    scroll-snap-type: x mandatory;
-  }
-
-  .snap-start {
-    scroll-snap-align: start;
-  }
-}
-
-/* Global scrollbar hide utility */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
-}
-
-/* Fade edges for horizontal scroll indication */
-.scroll-fade-edges {
-  position: relative;
-}
-
-.scroll-fade-edges::before,
-.scroll-fade-edges::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 24px;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.scroll-fade-edges::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(255, 149, 0, 0.9), transparent);
-}
-
-.scroll-fade-edges::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(255, 149, 0, 0.9), transparent);
-}
-
-/* Hide fade edges on small screens where tabs wrap */
-@media (min-width: 640px) and (max-width: 767px) {
-  .scroll-fade-edges::before,
-  .scroll-fade-edges::after {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .scroll-fade-edges::before,
-  .scroll-fade-edges::after {
-    display: none;
-  }
-}
-
-/* Enhanced mobile tab interactions */
-@media (max-width: 639px) {
-  /* Improve touch feedback for mobile tabs */
-  [role="tablist"] button {
-    transform-origin: center;
-    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
-  }
-
-  [role="tablist"] button:active {
-    transform: scale(0.95);
-  }
-
-  /* Better spacing for very small screens */
-  @media (max-width: 375px) {
-    [role="tablist"] {
-      padding-left: 12px !important;
-      padding-right: 12px !important;
-      gap: 8px !important;
-    }
-  }
-}
-
-/* Fix for wrapped tabs background coverage */
-@media (min-width: 640px) and (max-width: 767px) {
-  /* Ensure background covers all wrapped rows */
-  [role="tablist"] {
-    min-height: auto;
-    align-content: flex-start;
-  }
-
-  /* Reduce vertical spacing when wrapping to prevent overflow */
-  [role="tablist"] button {
-    margin-bottom: 4px;
-  }
-
-  /* Ensure proper spacing between wrapped rows */
-  [role="tablist"] {
-    row-gap: 8px !important;
-  }
-}
-
-/* Prevent content overlap when tabs wrap */
-@media (max-width: 767px) {
-  .tabs-container {
-    margin-bottom: 2rem;
-  }
-
-  /* Ensure TabsList has enough space for wrapped content */
-  [role="tablist"] {
-    overflow: visible !important;
-  }
-}
-
-/* Track */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 6px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #ff4800;
-}
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 217 91% 60%;
+    /* Electric Blue */
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
   }
 }
 
@@ -252,30 +41,68 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
-html {
-  background-color: #f5f5f5;
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-html.dark {
-  background-color: #1b1b1b;
+
+.glass-dock {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-.mask {
-  mask-image: url("/mask.svg");
-  mask-repeat: no-repeat;
-  mask-size: 200px;
-  color: rgb(255, 25, 25);
-  z-index: 1;
-  background-image: url("/mesh.svg");
-  background-repeat: repeat;
-  background-size: auto;
-  opacity: 0.3;
-}
-.mask:before {
+
+/* Background Texture */
+body::before {
   content: "";
-  mask-size: 120px;
-  backdrop-filter: blur(20px);
-  mask-image: url("/mask.svg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.4;
+}
+
+/* Custom Cursor */
+body {
+  cursor: none;
+}
+
+a,
+button,
+[role="button"] {
+  cursor: none;
+}
+
+/* --- THEMED SCROLLBAR --- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+  border: 2px solid #0d0d0d;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

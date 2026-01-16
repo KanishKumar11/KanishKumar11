@@ -1,6 +1,32 @@
 export const projects = [
   // FEATURED PROJECTS - Most impressive work across all categories
   {
+    id: 101,
+    title: "Gessure",
+    summary:
+      "A revolutionary AI-driven gesture recognition platform tailored for accessibility and immersive control. Gessure translates physical hand movements into digital commands with near-zero latency, enabling touchless interfaces for smart devices and specialized applications.",
+    link: "https://gessure.ai", // Placeholder
+    type: "Featured Project",
+    img: "https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=2664&auto=format&fit=crop", // Placeholder
+    github: "",
+    category: "ai-ml",
+    technologies: ["Python", "TensorFlow", "OpenCV", "React"],
+    isLiveApp: true,
+  },
+  {
+    id: 102,
+    title: "AssureQAI",
+    summary:
+      "AssureQAI is an enterprise-grade automated quality assurance platform powered by generative AI. It autonomously generates test cases, detects anomalies in codebases, and provides predictive insights to prevent bugs before deployment, streamlining the entire CI/CD pipeline.",
+    link: "https://assureqai.com", // Placeholder
+    type: "Featured Project",
+    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop", // Placeholder
+    github: "",
+    category: "ai-ml",
+    technologies: ["Node.js", "LangChain", "OpenAI API", "Next.js"],
+    isLiveApp: true,
+  },
+  {
     id: 1,
     title: "UnextDoor - AI Language Tutor",
     summary:
