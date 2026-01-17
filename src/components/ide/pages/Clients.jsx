@@ -1,39 +1,56 @@
 "use client";
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence, useMotionTemplate, useMotionValue } from "framer-motion";
-import { Users, Quote, Star, Activity, Server, Shield, Terminal, Globe, ChevronLeft, ChevronRight } from "lucide-react";
+import { Users, Quote, Star, Activity, Server, Shield, Terminal, Globe, ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
 
 // --- Data ---
 const clients = [
+  { name: "Gessure", logo: "/images/brands/gessure.png", website: "https://gessure.com", type: "Social Platform", status: "Connected" },
+  { name: "AssureQai", logo: "/images/brands/assureqai.png", website: "https://assureqai.com", type: "Ai Call Audits", status: "Verified" },
+  { name: "Dhawada", logo: "/images/brands/dhawada.png", website: "https://dhawada.com", type: "Jewelry Brand", status: "Verified" },
+  { name: 'Mending Mind', logo: '/images/brands/mending.png', website: 'https://mendingmind.in', type: 'Mental Health Platform', status: 'Active' },
   { name: "Lincify", logo: "/images/brands/lincify.png", website: "https://lincify.in", type: "Digital Agency", status: "Connected" },
-  { name: "Inovact", logo: "/images/brands/inovact.webp", website: "https://inovact.in", type: "Social Platform", status: "verified" },
-  { name: "LancerX", logo: "/images/brands/lancerx.webp", website: "https://lancerx.in", type: "Freelance Hub", status: "Active" },
-  { name: "DevOps Story", logo: "/images/brands/devopsstory.svg", website: "https://thedevopsstory.com", type: "Tech Publication", status: "Connected" },
-  { name: "YoHr Consultancy", logo: "/images/brands/YoHrConsultancy.webp", website: "https://yohrconsultancy.com", type: "HR SaaS", status: "Verified" },
-  { name: "Gupta Tutorials", logo: "/images/brands/guptatutorials.webp", website: "https://guptastutorial.com", type: "EdTech", status: "Active" },
+  { name: "Skoal", logo: "/images/brands/skoal.png", website: "https://skoal.zlaark.com", type: "BPO Services", status: "verified" },
+  { name: "ShivAi TeleRad", logo: "/images/brands/shivaitelerad.png", website: "https://shivaitelerad.com/", type: "TeleRad", status: "Verified" },
+  { name: "Unextdoor", logo: "/images/brands/unextdoor.png", website: "https://unextdoor.co", type: "AI Realtime language tutor", status: "Connected" },
+  { name: "Sourcing Screen", logo: "/images/brands/YoHrConsultancy.webp", website: "https://sourcingscreen.com", type: "HR SaaS", status: "Verified" },
 ];
 
 const testimonials = [
   {
-    quote: "Highly recommend Zlaark — fast delivery, excellent quality, clear communication, and great value. My go-to team for future web projects.",
-    author: "Happy Client",
-    role: "Business Owner",
+    quote: "I highly recommend Kanish as a phenomenal freelance website developer. He delivering exceptional quality with unbeatable speed. His work was not only excellent but also provided at a very reasonable charge. Kanish is now my go-to developer for any future website needs.",
+    author: "Raja Arsalaan",
+    role: "Strategist & Marketer",
     rating: 5,
-    id: "REV-1024"
+    id: "REV-LINKEDIN-01"
   },
   {
-    quote: "Shoutout to Zlaark! Amazing work, fast delivery, and great attention to detail. Highly recommended!",
-    author: "Satisfied Customer",
-    role: "Startup Founder",
+    quote: "You have made it 500x better than what I expected. Truly outstanding work!",
+    author: "Sai Kiran",
+    role: "Founder, Gessure",
     rating: 5,
-    id: "REV-2048"
+    id: "REV-GESSURE-01"
   },
   {
-    quote: "I highly recommend Zlaark for their professionalism, quality work, and reliable delivery. A great development partner.",
-    author: "Tech Client",
-    role: "Product Manager",
+    quote: "Really appreciate the amazing work Kanish has done in developing and enhancing our websites and platforms using React.js, Next.js, and WordPress. Your problem-solving skills, quick delivery, and attention to detail have been outstanding.",
+    author: "Shiv Pratap Singh",
+    role: "Talent Acquisition Expert",
     rating: 5,
-    id: "REV-4096"
+    id: "REV-LINKEDIN-02"
+  },
+  {
+    quote: "You did an awesome job with the app! Thanks a lot for the dedication and quality.",
+    author: "Farhin",
+    role: "Team Unextdoor",
+    rating: 5,
+    id: "REV-UNEXTDOOR-01"
+  },
+  {
+    quote: "Kanish is a great developer, fast and easy to work with. Highly recommended!",
+    author: "Sampreet Kulkarni",
+    role: "Product Designer",
+    rating: 5,
+    id: "REV-LINKEDIN-03"
   },
 ];
 
@@ -139,7 +156,7 @@ export default function Clients() {
                   <SpotlightCard className="rounded-xl p-6 h-full hover:border-[#58a6ff]/50 transition-colors">
                     <div className="flex flex-col h-full gap-4">
                       {/* Logo Area */}
-                      <div className="h-12 flex items-center justify-start filter grayscale hover:grayscale-0 transition-all duration-500">
+                      <div className="h-12 flex items-center justify-start  transition-all duration-500">
                         <img src={client.logo} alt={client.name} className="max-h-full max-w-[120px] object-contain" />
                       </div>
 
@@ -155,6 +172,27 @@ export default function Clients() {
                 </a>
               </motion.div>
             ))}
+
+            {/* "And Many More" Banner Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: clients.length * 0.1 + 0.3 }}
+              className="col-span-full"
+            >
+              <div className="relative border border-dashed border-[#30363d] bg-[#161b22]/50 rounded-xl p-6 flex items-center justify-center gap-4 group hover:border-[#58a6ff]/50 hover:bg-[#161b22] transition-all cursor-default overflow-hidden">
+                <div className="w-10 h-10 rounded-full bg-[#1f6feb]/10 flex items-center justify-center text-[#58a6ff] group-hover:scale-110 transition-transform shrink-0">
+                  <MoreHorizontal size={20} />
+                </div>
+                <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
+                  <h3 className="font-bold text-white text-lg">And Many More...</h3>
+                  <p className="text-sm text-[#8b949e] font-mono">Continuously expanding our network of trusted partners.</p>
+                </div>
+
+                {/* Subtle background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#58a6ff]/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+              </div>
+            </motion.div>
           </div>
         </div>
 
