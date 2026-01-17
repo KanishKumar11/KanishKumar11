@@ -2,7 +2,7 @@ import { getAllProjectSlugs, getAllCategories } from '@/lib/projects-seo';
 
 export default function sitemap() {
   const baseUrl = 'https://kanishkumar.in';
-  
+
   // Static pages
   const staticPages = [
     {
@@ -31,6 +31,12 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/book-a-call`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

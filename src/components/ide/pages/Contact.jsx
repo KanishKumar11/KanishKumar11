@@ -37,22 +37,39 @@ export default function Contact() {
     setIsSubmitting(true);
     setLogs([]); // Clear previous logs
 
-    // Simulate Network Request
-    addLog("Initializing request...", "info");
-    await new Promise(r => setTimeout(r, 600));
+    try {
+      addLog("Initializing request...", "info");
+      await new Promise(r => setTimeout(r, 400));
 
-    addLog(`POST /api/contact`, "command");
-    addLog(`Payload: { name: "${formData.name}", email: "${formData.email}" ... }`, "info");
+      addLog(`POST /api/contact`, "command");
+      addLog(`Payload: { name: "${formData.name}", email: "${formData.email}" ... }`, "info");
 
-    await new Promise(r => setTimeout(r, 800));
-    addLog("Encrypting message...", "warning");
+      await new Promise(r => setTimeout(r, 400));
+      addLog("Encrypting message...", "warning");
 
-    await new Promise(r => setTimeout(r, 800));
-    addLog("Handshake successful. Status: 200 OK", "success");
-    addLog("Message sent successfully.", "success");
+      // Actual API call
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", subject: "Project Inquiry", message: "" });
+      const data = await response.json();
+
+      if (response.ok) {
+        addLog("Handshake successful. Status: 200 OK", "success");
+        addLog("Message sent successfully.", "success");
+        setFormData({ name: "", email: "", subject: "Project Inquiry", message: "" });
+      } else {
+        addLog(`Error: ${data.error || 'Failed to send message'}`, "error");
+      }
+    } catch (error) {
+      addLog(`Connection failed: ${error.message}`, "error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Line Number Helpers

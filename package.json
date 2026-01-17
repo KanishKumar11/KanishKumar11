@@ -42,6 +42,7 @@
     "next": "^16.1.2",
     "next-optimized-images": "^2.6.2",
     "nextjs-toploader": "^1.6.4",
+    "nodemailer": "^7.0.12",
     "postcss": "^8.4.32",
     "postprocessing": "^6.38.2",
     "react": "^19.2.3",

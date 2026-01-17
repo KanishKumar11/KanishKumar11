@@ -133,20 +133,30 @@ const StatusBar = () => (
 );
 
 // --- MAIN LAYOUT ---
-export default function IDELayout() {
-  const [activeFile, setActiveFile] = useState("home");
+export default function IDELayout({ initialTab = "home" }) {
+  const [activeFile, setActiveFile] = useState(initialTab);
   const [activeTab, setActiveTab] = useState("explorer");
   const [sidebarVisible, setSidebarVisible] = useState(true);
   const [loading, setLoading] = useState(false);
 
   const files = [
-    { id: "home", name: "home.tsx", icon: FileCode, color: "text-blue-400", component: Home },
-    { id: "projects", name: "projects.tsx", icon: Box, color: "text-yellow-400", component: Projects },
-    { id: "about", name: "about.md", icon: User, color: "text-purple-400", component: About },
-    { id: "contact", name: "contact.css", icon: Mail, color: "text-cyan-400", component: Contact },
+    { id: "home", name: "home.tsx", icon: FileCode, color: "text-blue-400", component: Home, path: "/" },
+    { id: "projects", name: "projects.tsx", icon: Box, color: "text-yellow-400", component: Projects, path: "/projects" },
+    { id: "about", name: "about.md", icon: User, color: "text-purple-400", component: About, path: "/about" },
+    { id: "contact", name: "contact.css", icon: Mail, color: "text-cyan-400", component: Contact, path: "/contact" },
   ];
 
   const ActiveComponent = files.find(f => f.id === activeFile)?.component;
+
+  // Sync URL with active tab for SEO
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const currentFile = files.find(f => f.id === activeFile);
+      if (currentFile && window.location.pathname !== currentFile.path) {
+        window.history.pushState({}, '', currentFile.path);
+      }
+    }
+  }, [activeFile]);
 
   // Loading effect on file change
   useEffect(() => {
