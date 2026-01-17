@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import {
   FileCode, Search, GitBranch, Settings,
   Menu, X, ChevronRight, ChevronDown,
-  Box, Mail, User
+  Box, Mail, User, Users
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -12,6 +12,8 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Clients from "./pages/Clients";
+import Loading from "../Loading";
 
 // --- CONTEXT ---
 const IDEContext = createContext({});
@@ -138,11 +140,32 @@ export default function IDELayout({ initialTab = "home" }) {
   const [activeTab, setActiveTab] = useState("explorer");
   const [sidebarVisible, setSidebarVisible] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [initialBoot, setInitialBoot] = useState(true);
+
+  // Check manual session storage for boot sequence
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const hasBooted = sessionStorage.getItem('hasBooted');
+      if (hasBooted) {
+        setInitialBoot(false);
+      } else {
+        // Prevent scrolling during boot
+        document.body.style.overflow = 'hidden';
+      }
+    }
+  }, []);
+
+  const handleBootComplete = () => {
+    setInitialBoot(false);
+    sessionStorage.setItem('hasBooted', 'true');
+    document.body.style.overflow = 'auto';
+  };
 
   const files = [
     { id: "home", name: "home.tsx", icon: FileCode, color: "text-blue-400", component: Home, path: "/" },
     { id: "projects", name: "projects.tsx", icon: Box, color: "text-yellow-400", component: Projects, path: "/projects" },
     { id: "about", name: "about.md", icon: User, color: "text-purple-400", component: About, path: "/about" },
+    { id: "clients", name: "clients.json", icon: Users, color: "text-green-400", component: Clients, path: "/clients" },
     { id: "contact", name: "contact.css", icon: Mail, color: "text-cyan-400", component: Contact, path: "/contact" },
   ];
 
@@ -174,6 +197,10 @@ export default function IDELayout({ initialTab = "home" }) {
 
   return (
     <IDEContext.Provider value={{ activeFile, setActiveFile, sidebarVisible, setSidebarVisible, activeTab, setActiveTab }}>
+      <AnimatePresence>
+        {initialBoot && <Loading onComplete={handleBootComplete} />}
+      </AnimatePresence>
+
       <div className="fixed inset-0 bg-[#1e1e1e] flex flex-col text-[#cccccc] font-sans overflow-hidden">
 
         {/* Mobile Header - hidden on desktop, flex on mobile */}

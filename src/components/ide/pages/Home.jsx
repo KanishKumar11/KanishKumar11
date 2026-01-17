@@ -100,9 +100,9 @@ export default function Home({ onNavigate }) {
         <CodeLine num={15} delay={15} indent={3}><Plain c="<" /><Type c="HolographicCard" /><Plain c=">" /></CodeLine>
         <CodeLine num={16} delay={16} indent={4}><Plain c="<" /><Type c="Avatar" /><Plain c=" src=" /><String c="'/me.png'" /><Plain c=" />" /></CodeLine>
         <CodeLine num={17} delay={17} indent={4}><Plain c="<" /><Type c="Info" /><Plain c=" data={profile} />" /></CodeLine>
-        <CodeLine num={18} delay={18} indent={4}><Plain c="<" /><Type c="ExecuteButton" /> <Variable c="onClick" /><Plain c={"{() => "} /><Func c="init" /><Plain c="('projects')} />" /></CodeLine>
+        <CodeLine num={18} delay={18} indent={4}><Plain c="<" /><Type c="ExecuteButton" /> <Variable c="onClick" /><Plain c="{() => " /><Func c="init" /><Plain c="('projects')} />" /></CodeLine>
         <CodeLine num={19} delay={19} indent={3}><Plain c="</" /><Type c="HolographicCard" /><Plain c=">" /></CodeLine>
-        <CodeLine num={20} delay={20} indent={3}><Plain c="<" /><Type c="ConsoleOutput" /> <Variable c="logs" /><Plain c="={['Init...', 'Ready']} />" /></CodeLine>
+        <CodeLine num={20} delay={20} indent={3}><Plain c="<" /><Type c="ConsoleOutput" /> <Variable c="logs" /><Plain c="={logs} />" /></CodeLine>
         <CodeLine num={21} delay={21} indent={2}><Plain c="</" /><Type c="RuntimeEnvironment" /><Plain c=">" /></CodeLine>
         <CodeLine num={22} delay={22} indent={1}><Plain c=");" /></CodeLine>
         <CodeLine num={23} delay={23}><Plain c="}" /></CodeLine>
