@@ -80,7 +80,7 @@ export default function Contact() {
   );
 
   return (
-    <div className="min-h-full w-full bg-[#1e1e1e] flex flex-col items-center justify-center p-4 md:p-8 relative">
+    <div className="min-h-full w-full bg-[#1e1e1e] flex flex-col items-center justify-center p-8 md:p-4 sm:p-3 relative">
 
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
@@ -88,7 +88,7 @@ export default function Contact() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 blur-[100px] rounded-full" />
       </div>
 
-      <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-8 z-10">
+      <div className="w-full max-w-4xl grid grid-cols-2 lg:grid-cols-1 gap-8 md:gap-6 sm:gap-4 z-10">
 
         {/* Editor Side */}
         <motion.div

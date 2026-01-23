@@ -121,11 +121,11 @@ const TrackRow = ({ track, index, isActive, onClick }) => (
       </div>
     </div>
 
-    <div className="hidden md:block truncate hover:text-white transition-colors">{track.album}</div>
+    <div className="truncate hover:text-white transition-colors md:hidden">{track.album}</div>
 
     <div className="flex items-center justify-between">
       {/* Explicit Lyrics Icon placeholder for fun */}
-      <div className="border border-[#b3b3b3] px-1 rounded-[2px] text-[8px] h-3 flex items-center justify-center md:hidden">LYRICS</div>
+      <div className="border border-[#b3b3b3] px-1 rounded-[2px] text-[8px] h-3 items-center justify-center hidden md:flex">LYRICS</div>
       <div className="flex items-baseline gap-4">
         <Heart size={16} className="invisible group-hover:visible hover:text-white hover:fill-white" />
         <span>{track.duration}</span>
@@ -157,7 +157,7 @@ const LyricsView = ({ track, onClose }) => (
       </motion.div>
 
       <div className="space-y-6">
-        <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-white drop-shadow-lg">
+        <h2 className="text-5xl md:text-3xl sm:text-2xl font-bold leading-tight tracking-tight text-white drop-shadow-lg">
           "{track.quote}"
         </h2>
         <p className="text-xl text-[#ffffff99] font-medium">— {track.artist}</p>
@@ -265,7 +265,7 @@ export default function Clients() {
                       <div className="grid grid-cols-[16px_4fr_3fr_minmax(120px,1fr)] gap-4 px-4 py-2 text-[#b3b3b3] text-xs border-b border-[#ffffff1a] mb-2 uppercase tracking-wider sticky top-0 bg-[#121212] z-10">
                         <div className="text-center">#</div>
                         <div>Title</div>
-                        <div className="hidden md:block">Album</div>
+                        <div className="md:hidden">Album</div>
                         <div className="flex justify-between items-center"><Clock size={16} /></div>
                       </div>
 

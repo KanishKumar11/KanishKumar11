@@ -109,7 +109,7 @@ export default function Home({ onNavigate }) {
       </div>
 
       {/* LIVE PREVIEW / RUNTIME ENVIRONMENT */}
-      <div className="flex-1 bg-[#0d0d0d] border-l border-[#333] flex-col lg:hidden flex relative overflow-hidden font-mono">
+      <div className="flex-1 bg-[#0d0d0d] border-l md:border-l-0 border-[#333] flex-col flex relative overflow-hidden font-mono">
 
         {/* Background - NO GRID, just simple gradient as requested */}
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-transparent to-[#111]" />

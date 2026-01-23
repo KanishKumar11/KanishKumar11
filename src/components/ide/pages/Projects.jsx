@@ -206,7 +206,7 @@ export default function Projects() {
 
       {/* Modern Header */}
       <div className="p-6 border-b border-[#30363d] bg-[#0d0d0d]/80 backdrop-blur-md z-20 shrink-0">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="flex flex-row items-center md:flex-col md:items-start justify-between gap-6 sm:gap-4">
           <div>
             <h1 className="text-xl font-bold text-white tracking-tight flex items-center gap-3">
               <Cpu className="text-blue-500" />
@@ -215,7 +215,7 @@ export default function Projects() {
             <p className="text-xs text-[#8b949e] mt-1 font-mono">Select a module to initialize installation sequence.</p>
           </div>
 
-          <div className="relative w-full md:w-64">
+          <div className="relative w-64 md:w-full">
             <input
               type="text"
               value={search}
@@ -247,7 +247,7 @@ export default function Projects() {
       {/* Masonry Grid */}
       <div className="flex-1 p-6 relative z-10">
         {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-3 xl:grid-cols-4 lg:grid-cols-2 sm:grid-cols-1 gap-6 pb-20">
+          <div className="grid grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6 md:gap-4 pb-20">
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project, index) => (
                 <HolographicCard key={project.id} project={project} index={index} onInstall={handleInstall} />
