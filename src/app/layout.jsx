@@ -97,6 +97,8 @@ export default function RootLayout({ children }) {
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* dns-prefetch (not preconnect) for GA: resolves DNS cheaply without opening a connection that would compete with critical requests */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
         {/* Structured Data for Organization */}
         <script
@@ -139,17 +141,18 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
 
 
-        {/* Google Analytics */}
+        {/* Google Analytics - lazyOnload keeps it off the critical path (loads during browser idle, after the page is interactive) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-GA-ID"
-          strategy="afterInteractive"
+          id="google-analytics-src"
+          src="https://www.googletagmanager.com/gtag/js?id=G-C9GH2PH67D"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-YOUR-GA-ID');
+            gtag('config', 'G-C9GH2PH67D');
           `}
         </Script>
       </body>
